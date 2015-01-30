@@ -1,0 +1,23 @@
+\newpage
+\begin{thebibliography}{5}
+
+
+%Sublogarithmic time and preferential attachment Barabasi 
+\bibitem{biblio:stochastic_rumours} 
+D. J. Daley, D. G. Kendall.\\
+\emph{Stochastic Rumours}.\\
+\url{http://imamat.oxfordjournals.org/content/1/1/42.abstract}
+
+%Sublogarithmic time and preferential attachment Barabasi 
+\bibitem{biblio:rumors_spreading_sublog} 
+Benjamin Doerr, Mahmoud Fouz, Tobias Friedrich.\\
+\emph{Social Networks Spread Rumors in Sublogarithmic Time}.\\
+\url{https://people.mpi-inf.mpg.de/~tfried/paper/2011STOC.pdf}
+
+\bibitem{biblio:spread_rumor}
+Nick Fedewa, Emily Krause, Alexandra Sisson and Advisor: James Angelos.\\
+\emph{Spread of A Rumor}.\\
+\url{http://www.siam.org/students/siuro/vol6/S01182.pdf}.
+
+
+\end{thebibliography}

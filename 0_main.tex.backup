@@ -1,0 +1,140 @@
+\documentclass{llncs}
+
+% .svg to .pdf -> sudo apt-get install librsvg2-bin
+% rsvg-convert -f pdf -o t.pdf t.svg
+
+\usepackage{llncsdoc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{gensymb}
+\usepackage{url}
+\makeatletter % url breaks for long url
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+\urlstyle{same}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\lstdefinestyle{custom_code}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=l,
+  xleftmargin=\parindent,
+  basicstyle=\itshape\ttfamily,
+  identifierstyle=\color{gray}
+}
+
+
+
+\hyphenation{ma-estra}
+\hyphenation{glo-ba-le}
+\hyphenation{mo-da-li-tà}
+\hyphenation{pro-ba-bi-li-tà}
+\hyphenation{im-ple-men-ta-zio-ne}
+\hyphenation{mo-di-fi-can-do}
+\hyphenation{Dorogovtsev}
+\hyphenation{am-bi-en-te}
+\hyphenation{bla}
+
+
+
+
+
+\begin{document}
+
+\title{Diffusione di una notizia nei Social Network}
+%\subtitle{Alcuni studi che }
+\author{Gianluca Iselli}
+\institute{Dept. of Engeneering and Computer Science\\
+University of Bologna\\
+Bologna, Italy\\
+\email{gianluca.iselli@studio.unibo.it}}
+
+\maketitle
+
+\begin{abstract}
+
+Questo lavoro è stato svolto come progetto e relazione per l’esame di Sistemi Complessi.
+
+Il lavoro qui presentato è stato ispirato da una notizia della 
+NBC\footnote{\scriptsize Notizia sul sito della NBC: \url{http://www.nbcbayarea.com/news/national-international/Teachers-Social-Media-Lesson-Goes-Viral-on-Facebook-287159381.html}}
+del 30-12-2014.
+Nell'articolo si racconta di una maestra dell'Oklahoma che ha voluto dimostrare
+ai suoi studenti, ragazzi di dodicianni, la velocità di diffusione delle fotografie sui social network. 
+La maestra, Melissa Bour, ha condiviso su Facebook 
+un'immagine\footnote{\scriptsize Immagine condivisa dalla maestra, 
+Melissa Bour: \url{http://i.dailymail.co.uk/i/pix/2015/01/04/2466352100000578-2895903-image-a-74_1420339978179.jpg}}, che 
+cita ``Caro Facebook, [\dots] i miei alunni di 12 anni pensano ``non è nulla di che'' pubblicare immagini di 
+loro stessi[\dots]. Per favore aiutatemi condividendo e commentando con la vostre città di origine.
+In questa maniera [\dots] capiranno quanto velocemente le loro immagini possano fare il giro del mondo. [\dots]''.
+
+Successivamente Fox 23 ha ricondiviso, sulla pagina Facebook del giornale, 
+una copia della fotografia della maestra. In un'ora e mezza l'immagine ha raggiunto 
+le 1300 condivisioni ed ottenuto quasi 1000 ``mi piace''.
+
+Riuscire ad interpretare le proprietà della struttura e degli algoritmi di una rete 
+complessa gioca un ruolo fondamentale in molti campi dei \emph{sistemi complessi}.
+
+Lo studio di queste caratteristiche è spesso richiesto per argomenti importanti come i seguenti:
+\begin{itemize}
+\item Propagazione di una epidemia o pandemie tra la popolazione;
+\item Diffusione di un virus informatico tra dispositivi mobili e non;
+\item Divulgazione di una notizia in un piccolo paese, 
+o più in grande tra massmedia e pubblico o, ancora piu estesa, 
+in un Social Network
+\end{itemize}
+
+In questo periodo storico i Social Network hanno un successo globale 
+e non è difficile credere che una notizia, su servizi così diffusi, 
+possa fare il giro del mondo.
+
+L'argomento di studio discosta leggermente dalle intenzioni della maestra, infatti, 
+si tratta di un'analisi e di una misurazione di più parametri legati alle reti sociali. 
+
+Nell'Introduzione (Capitolo~\ref{section:introduzione}) verranno elecanti i punti 
+trattati all'interno di questo abstract.\\
+Nel Capitolo ``Implementazione'' (Capitolo~\ref{section:implementazione}) si 
+approfondiranno, poi, le modalità di sviluppo del progetto.\\
+Mentre invece, nel Capitolo ``Analisi dei Risultati'' (Capitolo~\ref{section:analisirisultati})
+sarà presentato quanto elaborato, ovvero il prodotto del lavoro svolto.
+
+\end{abstract}
+
+\newpage
+
+\input{1_introduzione.tex}
+\input{2_implementazione}
+\input{3_risultati.tex}
+\input{4_conclusioni.tex}
+
+\newpage
+
+\input{5_bibliografia.tex}
+
+\end{document}

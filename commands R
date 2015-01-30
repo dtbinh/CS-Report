@@ -1,0 +1,216 @@
+installare libboost 
+sudo apt-get install tklib tk-dev tcl-dev tcllib bison libbison-dev flex blt blt-dev
+
+download http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
+./bootstrap.sh
+./b2 --show-libraries
+./b2 --with-math --with-regex --with-graph
+sudo ./b2 --with-math --with-regex --with-graph install
+
+
+installare R
+sudo apt-get install r-base xsltproc docbook-xsl docbook-xml libbz2-dev libxml2 libxml2-dev
+
+
+piccolo script sui grafi
+sudo R
+	install.packages("igraph")
+	install.packages("poweRlaw")
+library(igraph)
+library(poweRlaw)
+g <- read.graph("path/to/file",format="graphml") 
+is.connected(g,mode="strong")
+degree(g) -> degree max
+
+
+
+
+
+http://thinkaurelius.com/2012/02/05/graph-degree-distributions-using-r-over-hadoop/
+
+
+
+g <- static.power.law.game(100, 500, 2.0, -1, FALSE, FALSE, TRUE)
+deg <- degree(g)
+power <- power.law.fit(deg)
+# Cumulative degree distribution with power law fitted:
+plot(degree.distribution(g, cumulative=TRUE), bg="black",pch=21, log="xy", ylab = "Frequency (log scale)", xlab = "Degree (log scale)", main = "Cumulative log-log plot of degree distribution")
+lines(1:20,10*(1:20)^((-power$alpha)+1))
+lines(1:5000, 2*(1:5000)^((-power$alpha)+1), col=2)
+
+
+pl <- displ$new(degree(g))
+pl$setXmin(estimate_xmin(m))
+
+
+
+
+
+
+write.graph(g, 'R_100.xml', format='graphml')
+tkplot(g)
+
+pdf('R_100.pdf')
+plot(...)
+dev.off()
+
+
+
+
+sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-fonts-recommended texlive-doc-it texlive-lang-italian kile
+
+https://docs.google.com/document/d/15F1Jj-Cx0lC-hOVDOezK0tRdAPehAbwoyWHNUuxPNrM/edit?usp=sharing
+
+
+
+
+
+
+
+
+
+
+
+
+g <- static.power.law.game(500, 2500, 2.0, -1, FALSE, FALSE, TRUE)
+is.connected(g)
+plot(degree.distribution(g, cumulative=TRUE), bg="black",pch=21, log="xy", ylab = "Frequency (log scale)", xlab = "Degree (log scale)", main = "Cumulative log-log plot of degree distribution")
+
+
+
+
+
+
+
+
+
+require (rgl)
+
+x <- rnorm(100)
+y <- rnorm(100)
+z <- rnorm(100)
+open3d()
+# Needs to be a bigger window than the default
+par3d(windowRect = c(100, 100, 612, 612))
+Sys.sleep(0.1) # Allow sluggish window managers to catch up
+parent <- currentSubscene3d()
+mfrow3d(2, 2)
+plot3d(x, y, z)
+next3d(reuse = FALSE)
+bgplot3d(plot(y, z))
+next3d(reuse = FALSE)
+bgplot3d(plot(x, z))
+next3d(reuse = FALSE)
+legend3d("center", c("2D Points", "3D Points"), pch = c(1, 16))
+useSubscene3d(parent)
+
+
+
+# A trefoil knot
+open3d()
+theta <- seq(0, 2*pi, len = 25)
+knot <- cylinder3d(
+center = cbind(
+sin(theta) + 2*sin(2*theta),
+2*sin(3*theta),
+cos(theta) - 2*cos(2*theta)),
+e1 = cbind(
+cos(theta) + 4*cos(2*theta),
+6*cos(3*theta),
+sin(theta) + 4*sin(2*theta)),
+radius = 0.8,
+closed = TRUE)
+shade3d(addNormals(subdivision3d(knot, depth = 2)), col = "green")
+
+
+http://www.statista.com/statistics/274829/age-distribution-of-active-social-media-users-worldwide-by-platform/
+http://www.siam.org/students/siuro/vol6/S01182.pdf
+http://en.wikipedia.org/wiki/Rumor_spread_in_social_network
+
+
+
+http://stackoverflow.com/questions/27662372/rgl-2d-surface-plot-of-matrix-not-enough-detail
+
+library(rgl)
+library(colorRamps)
+
+chart3d <- function(file, xmultiplier, ymultiplier, posx, posy, posz) {
+	m <- as.matrix(read.csv(file, sep=",", row.names = 1))
+	#m <- as.matrix(read.csv("a.csv", sep=",", header=FALSE))
+	for (i in 1:length(rownames(m))) {
+		if (i %% round(nrow(m)/10) != 1 && i != 1 && i != nrow(m))	
+			rownames(m)[i] <- ""
+	}	
+	palette <- rev(green2red(10)) # matlab.like(10)
+	rlim    <- range(m[!is.na(m)])
+	colors  <- palette[9*(m-rlim[1])/diff(rlim) + 1]
+	open3d(scale=c(1/(nrow(m)/(xmultiplier)),1/(ncol(m)/(ymultiplier)),1/diff(range(m))))
+	bbox3d(color=c("grey35","black"), emission="#555555", specular="#444444", shininess=5, alpha=0.8, xat=0, xlab="", yat=0, ylab="", zat=NULL, zlab=NULL)
+	surface3d((1:nrow(m)) , (1:ncol(m)) , m, color=colors, back="lines")
+	axis3d('x--', at = 1:nrow(m), labels=rownames(m), nticks=10, tick=TRUE)
+	axis3d('y--', at = 1:ncol(m), labels=colnames(m), nticks=5, tick=TRUE)
+	axis3d('z-+', tick=TRUE)
+	mtext3d("Strength of the rumor", 'x', line = 4, pos=posx) #line = 2, pos=c(-2, 4, -100))
+	mtext3d("Ages", 'y', line = 3, pos=posy)
+	mtext3d("Users who heard the rumor", 'y', pos=posz)
+	mtext3d("Growth of views based on the strength of the rumor and age", 'y', line = 2, pos=c(8.5, NA, 530))
+	rgl.viewpoint(0,-80, zoom=0.3, userMatrix=my_rot)
+	#rgl.light( theta = 0, phi = 0, viewpoint.rel = TRUE, ambient = "#FFFFFF", diffuse = "#FFFFFF", specular = "#FFFFFF", x = NULL, y = NULL, z = NULL)
+}
+chart3d("a.csv", 4, 1, c(NA, 3, 0), c(3, NA, 25), c(1, 0, 300))
+#chart3d("run-2-groups-NxN.csv", 4, 4)
+
+
+
+rgl.postscript("prova.pdf","pdf") 
+rgl.postscript("prova.tex","tex")
+rgl.pop()
+
+my_rot <- par3d("userMatrix")
+
+
+
+
+
+
+
+
+
+
+
+
+
+trnlim <- range(m)
+trnlen <- round((trnlim[2] - trnlim[1]) / 0.001)
+colors <- terrain.colors(trnlen,alpha=0) # height color lookup table
+#colors <- colorlut[ m-trnlim[1]+1 ] # assign colors to heights for each point
+
+
+primary.colors(n, steps = 3, no.white = TRUE)
+
+
+write.matrix(format(moDat2, scientific=FALSE), file = paste(targetPath, "dat2.csv", sep="/"), sep=",")
+
+
+
+
+# MIDDLE BUTTON  -> http://stackoverflow.com/questions/23996006/translation-using-mouse-for-rgl-plot
+pan3d <- function(button) {
+	start <- list()
+	begin <- function(x, y) {
+		start$userMatrix <<- par3d("userMatrix")
+		start$viewport <<- par3d("viewport")
+		start$scale <<- par3d("scale")
+		start$projection <<- rgl.projection()
+		start$pos <<- rgl.window2user( x/start$viewport[3], 1 - y/start$viewport[4], 0.5, projection=start$projection)
+	}
+	update <- function(x, y) {
+		xlat <- (rgl.window2user( x/start$viewport[3], 1 - y/start$viewport[4], 0.5,projection = start$projection) - start$pos)*start$scale
+		mouseMatrix <- translationMatrix(xlat[1], xlat[2], xlat[3])
+		par3d(userMatrix = start$userMatrix %*% t(mouseMatrix) )
+	}
+	rgl.setMouseCallbacks(button, begin, update)
+	cat("Callbacks set on button", button, "of rgl device",rgl.cur(),"\n")
+}
+pan3d(3)
+
