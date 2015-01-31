@@ -1,7 +1,5 @@
-\newpage
 \section{Progettazione e Implementazione}
-\label{section:implementazione}
-\vspace{10 mm}
+\label{section:progettazione}
 
 
 Per favorire un modello da studiare che permetta di risolvere gli obiettivi descritti 
@@ -49,7 +47,7 @@ Osservando il secondo obiettivo dobbiamo fornire alla notizia un ``argomento'' e
 
 Avendo a disposizione la distribuzione delle età, precedentemente mostrata nel grafico di figura~\ref{img:age_distribution_social},
 possiamo notare 5 intervalli di anni e quindi stabilire il valore di $N = 5$.
-\newpage
+
 Dobbiamo perciò anche definire 5 gruppi di utenti per distinguere le differenti età.
 Il numero di persone appartenenti ad ogni gruppo verrà semplicemente definito dalla semplice proporzione:
 \begin{equation*}
@@ -79,9 +77,7 @@ Per come abbiamo definito la formula della condivisione basterà che la distribu
 tendente a 0 per avere una miglior condivisione, o viceversa, più tendente a 1 per avere una peggior
 condivisione.
 
-\vspace{5 mm}
 \subsection{Strumenti}
-\vspace{3 mm}
 
 
 Dopo aver discusso di tutte le fasi della progettazione possiamo passare all'imple-mentazione.
@@ -98,7 +94,6 @@ API~\cite{biblio:netlogo_dictionary} fornite dal linguaggio stesso.
 
 \subsection{Topologie dei grafi}
 \label{section:graph_topologies}
-\vspace{3 mm}
 
 
 Come già annunciato all'inizio di questo capitolo i modelli di grafo che verranno studiati in questo lavoro
@@ -106,6 +101,7 @@ sono due.
 
 
 \subsubsection{Preferential Attachment}
+\label{section:graph_topologies_pa}
 Il modello Preferential Attachment, come già comunicato a inizio capitolo, è altamente diffuso e conosciuto.
 Tanto da avere una propria API per la creazione nel dizionario di NetLogo.
 
@@ -118,8 +114,40 @@ che risiede all'interno dell'estensione ``network'' verrà creato un grafo di nu
 del grafo Preferential Attachment.\\
 In figura \ref{img:preferential_attachment} è presente una rappresentazione grafica del grafo.
 
+\begin{figure}[!ht]
+ \centerline{
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=1.0\textwidth]{img/preferential-attachment-graph.eps}
+    \caption{Preferential Attachment}
+    \label{img:preferential_attachment}
+  \end{subfigure}
+  \qquad
+  \qquad
+  \qquad
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=1.0\textwidth]{img/dorogovtsev-mendes-graph.eps}
+    \caption{Dorogovtsev e Mendes}
+    \label{img:dorogovtsev_mendes}
+  \end{subfigure}
+ }
+ \caption{Rappresentazione grafica delle due topologie di grafo studiate.}
+ \label{img:graph_models}
+\end{figure}
 
 \subsubsection{Modello di Dorogovtsev e Mendes}
+\label{section:graph_topologies_dm}
+
+\begin{wrapfigure}{r}{0.33\textwidth}
+  \vspace*{-25pt}
+  \begin{center}
+    \includegraphics[width=0.28\textwidth]{img/gui-graph.png}
+  \end{center}
+ \vspace*{-10pt}
+ \caption{GUI: Creazione o importazione del grafo}
+ \vspace*{-35pt}
+ \label{img:gui_graph}
+\end{wrapfigure}
+
 Il modello definito da Dorogovtsev e Mendes viene implementato dalla libreria Java chiamata GraphStream~\cite{biblio:graphstream}.
 La libreria è formata essenzialmente da tre parti: 
 \begin{itemize}
@@ -130,92 +158,112 @@ La libreria è formata essenzialmente da tre parti:
 I grafi che verranno utilizzati nelle simulazioni sono stati creati da un'applicazione implementata appositamente.
 Una volta creati vengono salvati su file in formato GraphML~\cite{biblio:graphml} per poter 
 essere caricati dalla simulazione NetLogo. 
-Nella figura~\ref{img:gui_main} si può notare il pulsante per importare il file GraphML.\\
 In figura \ref{img:dorogovtsev_mendes} è presente una rappresentazione grafica del grafo.
-
-\begin{figure}[!ht]
- \centerline{
-  \begin{subfigure}[b]{0.42\textwidth}
-    \includegraphics[width=1.0\textwidth]{img/preferential-attachment-graph.eps}
-    \caption{Preferential Attachment}
-    \label{img:preferential_attachment}
-  \end{subfigure}
-  \qquad
-  \qquad
-  \begin{subfigure}[b]{0.42\textwidth}
-    \includegraphics[width=1.0\textwidth]{img/dorogovtsev-mendes-graph.eps}
-    \caption{Dorogovtsev e Mendes}
-    \label{img:dorogovtsev_mendes}
-  \end{subfigure}
- }
- \caption{Rappresentazione grafica delle due topologie di grafo studiate.}
- \label{img:graph_models}
-\end{figure}
-
 
 
 
 \subsection{Interfaccia grafica per la configurazione della rete}
 \label{section:gui_setup_graph}
-\vspace{3 mm}
 
-\begin{wrapfigure}{r}{0.37\textwidth}
-  \vspace{-40pt}
+\begin{wrapfigure}{l}{0.33\textwidth}
+  \vspace*{-35pt}
   \begin{center}
-    \includegraphics[width=0.30\textwidth]{img/gui-graph.png}
+    \includegraphics[width=0.28\textwidth]{img/gui-main.png}
   \end{center}
- \vspace{-10pt}
- \caption{GUI per la creazione/importazione del grafo}
- \vspace{-10pt}
- \label{img:gui_graph}
-\end{wrapfigure}
-Al fine di portare a termine gli obiettivi in precedenza descritti è stato necessario importare nel progetto, 
-dal grafico di figura~\ref{img:age_distribution_social}, i dati di alcuni Social Netwoks.
-
-
-\begin{wrapfigure}{l}{0.37\textwidth}
-  \vspace{-20pt}
-  \begin{center}
-    \includegraphics[width=0.30\textwidth]{img/gui-main.png}
-  \end{center}
- \vspace{-10pt}
- \caption{GUI principale: 
+ \vspace*{-10pt}
+ \caption{GUI: 
  scelta del Social Netwoks;
  pulsante per il calcolo della distribuzione delle età;
  pulsante per l'inizializzazione dei nodi.}
- \vspace{-10pt}
+ \vspace{-23 mm}
  \label{img:gui_main}
 \end{wrapfigure}
 
-Sono stati selezionati solo i tre che seguono per via della loro popolarità:
+Al fine di portare a termine gli obiettivi in precedenza descritti è stata creata una interfaccia grafica 
+per permettere all'utilizzatore di interagire con il progetto.
+Nella figura~\ref{img:gui_graph} e nella figura~\ref{img:gui_main} vengono mostrate due porzioni di GUI che servono 
+all'inizializzazione delle simulazioni.
+Nella maggior parte delle dimostrazioni di NetLogo è presente solo un pulsante ``Setup'' 
+e un pulsante ``go''. Data la particolarità del progetto non è stato possibile semplicizzare a questo livello l'interfaccia grafica 
+perciò, qui di seguito, verranno illustrate le caratteristiche principali.
+
+
+In figura~\ref{img:gui_graph} si possono notare due pulsanti:
 \begin{itemize}
- \item Facebook
- \item Twitter
- \item Google+
+ \item il primo serve per creare un grafo di tipo Preferential Attachment 
+  (Sezione ~\ref{section:graph_topologies_pa}) con un numero \emph{num-nodes} di nodi.
+ \item il secondo invece serve per importare un file GraphML (Sezione ~\ref{section:graph_topologies_dm}) tra 
+  quelli già creati in precedenza.
 \end{itemize}
 
-Per rendere l'applicazione più generale possibile sono stati implementati anche 5 cursori che permettono di far 
-decidere all'utilizzatore dei parametri personalizzati e che per semplicità intuitiva sono 
-stati chiamati:\\ ``\%-<fascia età inizio>-<fascia età fine>.
-Si può vedere la loro implementazione in figura~\ref{img:gui_main}.
+
+Dopo aver creato o importato il grafo, viene cercato l'hub della rete, ovvero il nodo con il \emph{degree} più alto.
+
+Un'altra fase necessaria è stata quella di importare nel progetto i dati di alcuni Social Netwoks
+presenti nel grafico di figura~\ref{img:age_distribution_social}.
+
+\begin{wrapfigure}{l}{0.33\textwidth}
+  \vspace*{-20pt}
+  \begin{center}
+    \includegraphics[width=0.28\textwidth]{img/gui-news.png}
+  \end{center}
+ \vspace*{-10pt}
+ \caption{GUI: 
+ cursori per la definizione di una notizia.}
+ \vspace*{-10pt}
+ \label{img:gui_news}
+\end{wrapfigure}
+Sono stati inclusi solo i tre che vengono  mostrati in figura ~\ref{img:gui_main} per via della loro popolarità.
+In alcune simulazioni esiste la necessità di creare condizioni particolari che non possono essere risolte con i dati 
+di questi Social Netwoks.
+Per rendere l'applicazione più generale possibile infatti sono stati implementati anche 5 cursori che permettono di far 
+decidere all'utilizzatore dei parametri personalizzati.
+Ognuno di questi cursori serve per impostare la percentuale di utenti facente parte della suddetta fascia d'età.
+Per semplicità sono stati chiamati:\\``\%-<fascia età inizio>-<fascia età fine>''.
+
+Si può vedere la loro implementazione nell'esempio in figura~\ref{img:gui_main} dove si nota che:
+\begin{itemize}
+ \item il gruppo formato dalle persone che hanno tra i 16 e i 24 anni sono il 30\%;
+ \item quelle che hanno tra i 25 e i 34 anni sono il 25\%;
+ \item quelle che hanno tra i 35 e i 44 anni sono il 15\%;
+ \item quelle che hanno tra i 45 e i 54 anni sono il 20\%gruppo;
+ \item quelle che hanno tra i 55 e i 64 anni sono il 10\%;
+\end{itemize}
 
 
 
-L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
-permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
-Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
-L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
-permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
-Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
-L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
-permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
-Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
-L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
-permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
-Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
-L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
-permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
-Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
+\begin{wrapfigure}{r}{0.40\textwidth}
+  \vspace*{-20pt}
+  \begin{center}
+    \includegraphics[width=0.35\textwidth]{img/gui-first-second-test.png}
+  \end{center}
+ \vspace*{-10pt}
+ \caption{GUI: 
+ pulsanti per dare il via ai primi due test}
+ \vspace*{-10pt}
+ \label{img:gui_first_second_test}
+\end{wrapfigure}
+Per calcolare quanti utenti devono essere presenti per ogni intervallo di età bisogna premere il pulsante ''Setup Age Distribution``.
+Il pulsante ''Setup Social Netwoks``, invece, serve a resettare i dati base degli utenti, riportando la simulazione 
+allo stato iniziale, senza eliminare ne il grafo ne la distribuzione dell'età.
+Per stato iniziale della simulazione si intende posizionare nell'hub la notizia, facendolo diventare uno ``Spreader''.
+In tutti gli altri utenti del grafo verrà impostato lo stato ``Ignorant'' e sarà calcolato un nuovo valore di 
+astensione alla notizia.
+
+Sono presenti altri 5 cursori, mostrati in figura~\ref{img:gui_news}, che identificano l'intensità con cui la notizia è forte 
+verso un certo gruppo di utenti. 
+Viene definita come\\
+``p-<fascia età inizio>-<fascia età fine>'' per indicare la probabilità di condivisione che ha sulla particolare
+fascia d'età.
+Nell'esempio in figura~\ref{img:gui_news} la probabilità nel primo gruppo vale 1.0, ovvero la condivisione avrà \emph{sempre} esito positivo.
+In caso contrario nel quinto gruppo la probabilità è 0 perciò la condivisione avrà sempre esito negativo. 
+Nei casi intermedi viene confrontato il valore di astensione dell'utente al valore del cursore dell'età dell'utente come è stato definito 
+in fase di progettazione (Sezione ~\ref{section:progettazione}).
+
+
+
+
+
 
 
 

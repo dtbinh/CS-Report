@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  31 JAN 2015 01:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  31 JAN 2015 04:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,20 +707,20 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 (./0_main.aux)
 \openout1 = `0_main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count151
@@ -749,21 +749,21 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \celsius on input line 66.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 66.
+LaTeX Info: Redefining \celsius on input line 70.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 70.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 66.
-Package gensymb Info: Using \Omega for \ohm on input line 66.
+LaTeX Info: Redefining \ohm on input line 70.
+Package gensymb Info: Using \Omega for \ohm on input line 70.
 
 Package gensymb Warning: Not defining \micro.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 66.
+Package hyperref Info: Link coloring ON on input line 70.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -773,9 +773,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 66.
-LaTeX Info: Redefining \pageref on input line 66.
-LaTeX Info: Redefining \nameref on input line 66.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
 
 (./0_main.out) (./0_main.out)
 \@outlinefile=\write3
@@ -784,18 +784,22 @@ LaTeX Info: Redefining \nameref on input line 66.
 \c@lstlisting=\count158
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 77.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (5.33261pt too wide) in paragraph at lines 94--97
+Overfull \hbox (5.33261pt too wide) in paragraph at lines 98--101
 \T1/cmr/m/n/9 nale, una copia della fo-tografia della ma-estra. In un'ora e mez
 za l'immagine
  []
 
 
-Overfull \hbox (3.00584pt too wide) in paragraph at lines 117--123
+LaTeX Warning: Reference `section:implementazione' on page 1 undefined on input
+ line 123.
+
+
+Overfull \hbox (3.00584pt too wide) in paragraph at lines 121--127
 []\T1/cmr/m/n/9 Nell'Introduzione (Capi-tolo [][]1[][]) ver-ranno ele-canti i p
 unti trat-tati all'interno
  []
@@ -803,42 +807,37 @@ unti trat-tati all'interno
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./1_introduzione.tex
-Overfull \hbox (1.60101pt too wide) in paragraph at lines 28--30
+Overfull \hbox (1.60101pt too wide) in paragraph at lines 26--28
 []\T1/cmr/m/n/10 ``Spreaders'' : tutti gli utenti che de-ci-dono di con-di-vide
 re la no-tizia. Il ``paziente
  []
 
-<img/age-distribution.png, id=72, 751.80875pt x 426.59375pt>
+<img/age-distribution.png, id=71, 751.80875pt x 426.59375pt>
 File: img/age-distribution.png Graphic file (type png)
 
 <use img/age-distribution.png>
-Package pdftex.def Info: img/age-distribution.png used on input line 61.
-(pdftex.def)             Requested size: 347.12354pt x 196.97105pt.
- [2]) (./2_implementazione.tex [3 <./img/age-distribution.png>]
-Overfull \hbox (1.85046pt too wide) in paragraph at lines 13--15
+Package pdftex.def Info: img/age-distribution.png used on input line 57.
+(pdftex.def)             Requested size: 277.69987pt x 157.57684pt.
+ [2]) (./2_implementazione.tex
+Overfull \hbox (1.85046pt too wide) in paragraph at lines 11--13
 []\T1/cmr/m/n/10 Per il primo obi-et-tivo verrà posta l'attenzione su due al-go
 -ritmi per la creazione
  []
 
-[4]
-Overfull \hbox (2.30296pt too wide) in paragraph at lines 71--74
+[3 <./img/age-distribution.png>]
+Overfull \hbox (2.30296pt too wide) in paragraph at lines 69--72
 \T1/cmr/m/n/10 d'età \T1/cmr/m/it/10 'e'\T1/cmr/m/n/10 , men-tre $ \OML/cmm/m/i
 t/10 UTENTE[]:astensione $ \T1/cmr/m/n/10 è l'astensione alla no-tizia dell'ute
 nte
  []
 
 
-Overfull \hbox (8.73767pt too wide) in paragraph at lines 75--81
+Overfull \hbox (8.73767pt too wide) in paragraph at lines 73--79
 []\T1/cmr/m/n/10 L'ultimo obi-et-tivo agisce pro-prio su quest'ultima parte ap-
 pena definita. Quando
  []
 
-[5]
-Overfull \hbox (1.12366pt too wide) in paragraph at lines 130--135
-\T1/cmr/m/n/10 I grafi che ver-ranno uti-liz-zati nelle sim-u-lazioni sono stat
-i creati da un'applicazione
- []
-
+[4]
 Package epstopdf Info: Source file: <img/preferential-attachment-graph.eps>
 (epstopdf)                    date: 2015-01-30 23:01:28
 (epstopdf)                    size: 25521 bytes
@@ -848,17 +847,17 @@ erted-to.pdf>
 (epstopdf)                    size: 6905 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/preferential-attachmen
 t-graph-eps-converted-to.pdf img/preferential-attachment-graph.eps>
-(epstopdf)             \includegraphics on input line 150.
+(epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/preferential-attachment-graph-eps-converted-to.pdf, id=127, 232.87pt x 202
+<img/preferential-attachment-graph-eps-converted-to.pdf, id=115, 232.87pt x 202
 .7575pt>
 File: img/preferential-attachment-graph-eps-converted-to.pdf Graphic file (type
  pdf)
  <use img/preferential-attachment-graph-eps-converted-to.pdf>
 Package pdftex.def Info: img/preferential-attachment-graph-eps-converted-to.pdf
- used on input line 150.
-(pdftex.def)             Requested size: 145.79124pt x 126.94278pt.
+ used on input line 132.
+(pdftex.def)             Requested size: 138.84729pt x 120.89745pt.
 Package epstopdf Info: Source file: <img/dorogovtsev-mendes-graph.eps>
 (epstopdf)                    date: 2015-01-30 23:30:21
 (epstopdf)                    size: 27357 bytes
@@ -868,93 +867,83 @@ Package epstopdf Info: Source file: <img/dorogovtsev-mendes-graph.eps>
 (epstopdf)                    size: 7041 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/dorogovtsev-mendes-gra
 ph-eps-converted-to.pdf img/dorogovtsev-mendes-graph.eps>
-(epstopdf)             \includegraphics on input line 150.
+(epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/dorogovtsev-mendes-graph-eps-converted-to.pdf, id=128, 216.81pt x 192.72pt
+<img/dorogovtsev-mendes-graph-eps-converted-to.pdf, id=116, 216.81pt x 192.72pt
 >
 File: img/dorogovtsev-mendes-graph-eps-converted-to.pdf Graphic file (type pdf)
 
  <use img/dorogovtsev-mendes-graph-eps-converted-to.pdf>
 Package pdftex.def Info: img/dorogovtsev-mendes-graph-eps-converted-to.pdf used
- on input line 150.
-(pdftex.def)             Requested size: 145.79124pt x 129.5981pt.
+ on input line 132.
+(pdftex.def)             Requested size: 138.84729pt x 123.42564pt.
 
-<img/gui-graph.png, id=129, 177.66376pt x 193.72375pt>
+<img/gui-graph.png, id=117, 177.66376pt x 193.72375pt>
 File: img/gui-graph.png Graphic file (type png)
  <use img/gui-graph.png>
-Package pdftex.def Info: img/gui-graph.png used on input line 165.
-(pdftex.def)             Requested size: 104.1381pt x 113.55406pt.
+Package pdftex.def Info: img/gui-graph.png used on input line 143.
+(pdftex.def)             Requested size: 97.19415pt x 105.9838pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
-[]\T1/cmr/m/n/10 Fig.3: |GUI per la
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
-\T1/cmr/m/n/10 creazione/im-por-tazione
- []
-
-[6 <./img/preferential-attachment-graph-eps-converted-to.pdf> <./img/dorogovtse
+[5 <./img/preferential-attachment-graph-eps-converted-to.pdf> <./img/dorogovtse
 v-mendes-graph-eps-converted-to.pdf>]
-
-Package wrapfig Warning: Collision between wrapping environments on input line 
-176.
-
-<img/gui-main.png, id=154, 180.675pt x 472.76625pt>
+<img/gui-main.png, id=143, 180.675pt x 472.76625pt>
 File: img/gui-main.png Graphic file (type png)
  <use img/gui-main.png>
-Package pdftex.def Info: img/gui-main.png used on input line 179.
-(pdftex.def)             Requested size: 104.1381pt x 272.49493pt.
+Package pdftex.def Info: img/gui-main.png used on input line 171.
+(pdftex.def)             Requested size: 97.19415pt x 254.32332pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--185
+Underfull \hbox (badness 5504) in paragraph at lines 177--177
+[]\T1/cmr/m/n/10 Fig.4: |GUI: scelta del
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 177--177
 \T1/cmr/m/n/10 per il cal-colo della dis-
  []
 
+<img/gui-news.png, id=150, 176.66pt x 194.7275pt>
+File: img/gui-news.png Graphic file (type png)
+ <use img/gui-news.png>
+Package pdftex.def Info: img/gui-news.png used on input line 208.
+(pdftex.def)             Requested size: 97.19415pt x 107.1361pt.
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 19
-0.
+[6 <./img/gui-graph.png> <./img/gui-main.png>]
+Overfull \hbox (8.31958pt too wide) in paragraph at lines 224--225
+[]\T1/cmr/m/n/10 Si può vedere la loro im-ple-men-ta-zione nell'esempio
+ []
+
+<img/gui-first-second-test.png, id=164, 253.94875pt x 118.4425pt>
+File: img/gui-first-second-test.png Graphic file (type png)
+
+<use img/gui-first-second-test.png>
+Package pdftex.def Info: img/gui-first-second-test.png used on input line 238.
+(pdftex.def)             Requested size: 121.49535pt x 56.66559pt.
+) (./3_risultati.tex [7 <./img/gui-news.png> <./img/gui-first-second-test.png>]
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 19
-2.
-
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 19
-3.
-
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 19
-4.
-
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 19
-7.
-
-[7 <./img/gui-graph.png> <./img/gui-main.png>]) (./3_risultati.tex [8]
-
-LaTeX Warning: Reference `subsection:TODO' on page 9 undefined on input line 19
+LaTeX Warning: Reference `subsection:TODO' on page 8 undefined on input line 19
 .
 
 
-LaTeX Warning: Reference `subsection:TODO' on page 9 undefined on input line 22
+LaTeX Warning: Reference `subsection:TODO' on page 8 undefined on input line 22
 .
 
-<img/weibull-alpha-0.75.png, id=168, 834.11626pt x 237.88875pt>
+<img/weibull-alpha-0.75.png, id=178, 834.11626pt x 237.88875pt>
 File: img/weibull-alpha-0.75.png Graphic file (type png)
 
 <use img/weibull-alpha-0.75.png>
 Package pdftex.def Info: img/weibull-alpha-0.75.png used on input line 32.
 (pdftex.def)             Requested size: 381.838pt x 108.90018pt.
- [9 <./img/weibull-alpha-0.75.png>]
-<charts/last-test-str_0.5.pdf, id=179, 799.98875pt x 412.54124pt>
+ [8 <./img/weibull-alpha-0.75.png>]
+<charts/last-test-str_0.5.pdf, id=188, 799.98875pt x 412.54124pt>
 File: charts/last-test-str_0.5.pdf Graphic file (type pdf)
 
 <use charts/last-test-str_0.5.pdf>
 Package pdftex.def Info: charts/last-test-str_0.5.pdf used on input line 79.
 (pdftex.def)             Requested size: 381.838pt x 196.90965pt.
-) (./4_conclusioni.tex) [10 <./charts/last-test-str_0.5.pdf>] [11] (./5_bibliog
-rafia.tex
+) (./4_conclusioni.tex) [9 <./charts/last-test-str_0.5.pdf>] [10] (./5_bibliogr
+afia.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
@@ -1012,28 +1001,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--50
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (./0_main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `0_main.out' has not changed.
 (rerunfilecheck)             Checksum: A13D6F048B1B753DDB0E37698ED3E9B3;708.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 9942 strings out of 495017
- 143185 string characters out of 6181021
- 242173 words of memory out of 5000000
- 12943 multiletter control sequences out of 15000+600000
+ 9959 strings out of 495017
+ 143591 string characters out of 6181021
+ 242430 words of memory out of 5000000
+ 12956 multiletter control sequences out of 15000+600000
  16517 words of font info for 38 fonts, out of 8000000 for 9000
- 23 hyphenation exceptions out of 8191
- 36i,9n,43p,491b,1095s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26 hyphenation exceptions out of 8191
+ 36i,9n,43p,492b,1095s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/ise/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/ise
 /.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ise/.texmf-var/f
 onts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ise/.texmf-var/fonts/pk/ljfou
@@ -1048,10 +1037,10 @@ cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on 0_main.pdf (12 pages, 272992 bytes).
+Output written on 0_main.pdf (11 pages, 285518 bytes).
 PDF statistics:
- 664 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
