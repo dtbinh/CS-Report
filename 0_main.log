@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  31 JAN 2015 04:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  31 JAN 2015 06:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -818,21 +818,15 @@ File: img/age-distribution.png Graphic file (type png)
 <use img/age-distribution.png>
 Package pdftex.def Info: img/age-distribution.png used on input line 57.
 (pdftex.def)             Requested size: 277.69987pt x 157.57684pt.
- [2]) (./2_implementazione.tex
-Overfull \hbox (1.85046pt too wide) in paragraph at lines 11--13
-[]\T1/cmr/m/n/10 Per il primo obi-et-tivo verrà posta l'attenzione su due al-go
--ritmi per la creazione
- []
-
-[3 <./img/age-distribution.png>]
-Overfull \hbox (2.30296pt too wide) in paragraph at lines 69--72
+ [2]) (./2_implementazione.tex [3 <./img/age-distribution.png>]
+Overfull \hbox (2.30296pt too wide) in paragraph at lines 67--70
 \T1/cmr/m/n/10 d'età \T1/cmr/m/it/10 'e'\T1/cmr/m/n/10 , men-tre $ \OML/cmm/m/i
 t/10 UTENTE[]:astensione $ \T1/cmr/m/n/10 è l'astensione alla no-tizia dell'ute
 nte
  []
 
 
-Overfull \hbox (8.73767pt too wide) in paragraph at lines 73--79
+Overfull \hbox (8.73767pt too wide) in paragraph at lines 71--77
 []\T1/cmr/m/n/10 L'ultimo obi-et-tivo agisce pro-prio su quest'ultima parte ap-
 pena definita. Quando
  []
@@ -847,7 +841,7 @@ erted-to.pdf>
 (epstopdf)                    size: 6905 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/preferential-attachmen
 t-graph-eps-converted-to.pdf img/preferential-attachment-graph.eps>
-(epstopdf)             \includegraphics on input line 132.
+(epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/preferential-attachment-graph-eps-converted-to.pdf, id=115, 232.87pt x 202
@@ -856,7 +850,7 @@ File: img/preferential-attachment-graph-eps-converted-to.pdf Graphic file (type
  pdf)
  <use img/preferential-attachment-graph-eps-converted-to.pdf>
 Package pdftex.def Info: img/preferential-attachment-graph-eps-converted-to.pdf
- used on input line 132.
+ used on input line 130.
 (pdftex.def)             Requested size: 138.84729pt x 120.89745pt.
 Package epstopdf Info: Source file: <img/dorogovtsev-mendes-graph.eps>
 (epstopdf)                    date: 2015-01-30 23:30:21
@@ -867,7 +861,7 @@ Package epstopdf Info: Source file: <img/dorogovtsev-mendes-graph.eps>
 (epstopdf)                    size: 7041 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/dorogovtsev-mendes-gra
 ph-eps-converted-to.pdf img/dorogovtsev-mendes-graph.eps>
-(epstopdf)             \includegraphics on input line 132.
+(epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/dorogovtsev-mendes-graph-eps-converted-to.pdf, id=116, 216.81pt x 192.72pt
@@ -876,13 +870,13 @@ File: img/dorogovtsev-mendes-graph-eps-converted-to.pdf Graphic file (type pdf)
 
  <use img/dorogovtsev-mendes-graph-eps-converted-to.pdf>
 Package pdftex.def Info: img/dorogovtsev-mendes-graph-eps-converted-to.pdf used
- on input line 132.
+ on input line 130.
 (pdftex.def)             Requested size: 138.84729pt x 123.42564pt.
 
 <img/gui-graph.png, id=117, 177.66376pt x 193.72375pt>
 File: img/gui-graph.png Graphic file (type png)
  <use img/gui-graph.png>
-Package pdftex.def Info: img/gui-graph.png used on input line 143.
+Package pdftex.def Info: img/gui-graph.png used on input line 141.
 (pdftex.def)             Requested size: 97.19415pt x 105.9838pt.
 
 [5 <./img/preferential-attachment-graph-eps-converted-to.pdf> <./img/dorogovtse
@@ -890,26 +884,26 @@ v-mendes-graph-eps-converted-to.pdf>]
 <img/gui-main.png, id=143, 180.675pt x 472.76625pt>
 File: img/gui-main.png Graphic file (type png)
  <use img/gui-main.png>
-Package pdftex.def Info: img/gui-main.png used on input line 171.
+Package pdftex.def Info: img/gui-main.png used on input line 169.
 (pdftex.def)             Requested size: 97.19415pt x 254.32332pt.
 
-Underfull \hbox (badness 5504) in paragraph at lines 177--177
+Underfull \hbox (badness 5504) in paragraph at lines 175--175
 []\T1/cmr/m/n/10 Fig.4: |GUI: scelta del
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 177--177
+Underfull \hbox (badness 1348) in paragraph at lines 175--175
 \T1/cmr/m/n/10 per il cal-colo della dis-
  []
 
 <img/gui-news.png, id=150, 176.66pt x 194.7275pt>
 File: img/gui-news.png Graphic file (type png)
  <use img/gui-news.png>
-Package pdftex.def Info: img/gui-news.png used on input line 208.
+Package pdftex.def Info: img/gui-news.png used on input line 206.
 (pdftex.def)             Requested size: 97.19415pt x 107.1361pt.
 
 [6 <./img/gui-graph.png> <./img/gui-main.png>]
-Overfull \hbox (8.31958pt too wide) in paragraph at lines 224--225
+Overfull \hbox (8.31958pt too wide) in paragraph at lines 222--223
 []\T1/cmr/m/n/10 Si può vedere la loro im-ple-men-ta-zione nell'esempio
  []
 
@@ -917,33 +911,33 @@ Overfull \hbox (8.31958pt too wide) in paragraph at lines 224--225
 File: img/gui-first-second-test.png Graphic file (type png)
 
 <use img/gui-first-second-test.png>
-Package pdftex.def Info: img/gui-first-second-test.png used on input line 238.
+Package pdftex.def Info: img/gui-first-second-test.png used on input line 236.
 (pdftex.def)             Requested size: 121.49535pt x 56.66559pt.
-) (./3_risultati.tex [7 <./img/gui-news.png> <./img/gui-first-second-test.png>]
+ [7 <./img/gui-news.png> <./img/gui-first-second-test.png>]) (./3_risultati.tex
+ [8]
 
-
-LaTeX Warning: Reference `subsection:TODO' on page 8 undefined on input line 19
+LaTeX Warning: Reference `subsection:TODO' on page 9 undefined on input line 19
 .
 
 
-LaTeX Warning: Reference `subsection:TODO' on page 8 undefined on input line 22
+LaTeX Warning: Reference `subsection:TODO' on page 9 undefined on input line 22
 .
 
-<img/weibull-alpha-0.75.png, id=178, 834.11626pt x 237.88875pt>
+<img/weibull-alpha-0.75.png, id=183, 834.11626pt x 237.88875pt>
 File: img/weibull-alpha-0.75.png Graphic file (type png)
 
 <use img/weibull-alpha-0.75.png>
 Package pdftex.def Info: img/weibull-alpha-0.75.png used on input line 32.
 (pdftex.def)             Requested size: 381.838pt x 108.90018pt.
- [8 <./img/weibull-alpha-0.75.png>]
-<charts/last-test-str_0.5.pdf, id=188, 799.98875pt x 412.54124pt>
+ [9 <./img/weibull-alpha-0.75.png>]
+<charts/last-test-str_0.5.pdf, id=193, 799.98875pt x 412.54124pt>
 File: charts/last-test-str_0.5.pdf Graphic file (type pdf)
 
 <use charts/last-test-str_0.5.pdf>
 Package pdftex.def Info: charts/last-test-str_0.5.pdf used on input line 79.
 (pdftex.def)             Requested size: 381.838pt x 196.90965pt.
-) (./4_conclusioni.tex) [9 <./charts/last-test-str_0.5.pdf>] [10] (./5_bibliogr
-afia.tex
+) (./4_conclusioni.tex) [10 <./charts/last-test-str_0.5.pdf>] [11] (./5_bibliog
+rafia.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
@@ -1002,7 +996,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--50
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
- [11]
+ [12]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (./0_main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
@@ -1016,9 +1010,9 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 9959 strings out of 495017
- 143591 string characters out of 6181021
- 242430 words of memory out of 5000000
+ 9960 strings out of 495017
+ 143598 string characters out of 6181021
+ 242432 words of memory out of 5000000
  12956 multiletter control sequences out of 15000+600000
  16517 words of font info for 38 fonts, out of 8000000 for 9000
  26 hyphenation exceptions out of 8191
@@ -1037,10 +1031,10 @@ cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on 0_main.pdf (11 pages, 285518 bytes).
+Output written on 0_main.pdf (12 pages, 287371 bytes).
 PDF statistics:
- 682 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 690 PDF objects out of 1000 (max. 8388607)
+ 249 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,5 @@
 \section{Progettazione e Implementazione}
-\label{section:implementazione}
+\label{section:progettazione}
 
 
 Per favorire un modello da studiare che permetta di risolvere gli obiettivi descritti 
@@ -8,8 +8,8 @@ pocanzi sono state prese le decisioni qui di seguito elencate.
 Iniziamo con il dire che il social network verrà astratto ad un grafo scale-free dove ogni 
 nodo è un utente che possiede alcune caratteristiche.
 
-Per il primo obiettivo verrà posta l'attenzione su due algoritmi per la creazione di grafi che 
-formano modelli di rete differenti.
+Per il primo obiettivo verrà posta l'attenzione su due algoritmi, impiegati per la creazione di grafi, 
+che formano modelli di rete differenti.
 
 Inizialmente verrà fatto vedere come una notizia viene propagata in un grafo di tipo 
 ``Preferential Attachment'' suggerito da Barabási e Albert~\cite{biblio:barabasilab_emergence}.
@@ -26,7 +26,7 @@ dalla peculiarità di alcune loro caratteristiche che elencherò qui di seguito:
   \item è impiegato da buona parte di studi che trattano argomenti somiglianti lo ``Spreading Rumors'';
   \item non è un grafo di tipo frattale~\cite{biblio:fractal_resistant_disease} ma ha una caratteristica simile. 
  Non possedendo cricche di almeno 3 nodi, se un nodo non condivide la notizia, 
- tutti i suoi nodi ``figli'' non riceveranno mai l'informazione e perciò rimarranno per sempre ignoranti sulla notizia.
+ tutti i suoi nodi ``figli'' non riceveranno mai l'informazione.
  \end{itemize}
  
  \item La topologia di grafo definita da Dorogovtsev e Mendes invece:
@@ -57,9 +57,7 @@ dove $\%\_UTENTI\_GRUPPO$ è la percentuale presente nel grafico di figura ~\ref
 
 A questo punto per la condivisione dell'informazione tra nodo e nodo manca solamente la formula per definire la probabilità 
 della propagazione.
-Se dovessimo lasciare così le cose avremo un valore della notizia per cui il gruppo condivide ed un altro 
-valore per cui non la condivide.
-L'idea però è quella di dare la ``possibilità'' all'utente, come nella realtà, di decidere se la 
+L'idea è quella di dare la ``possibilità'' all'utente, come nella realtà, di decidere se la 
 notizia gli interessa oppure no. 
 Questo ci obbliga ad aggiungere un nuovo paramentro all'utente, l'astensione alla notizia.
 
@@ -110,8 +108,8 @@ Invocando la funzione:
  generate-preferential-attachment turtles links num-nodes
 \end{lstlisting}
 
-che risiede all'interno dell'estensione ``network'' verrà creato un grafo di num-nodes con le proprietà 
-del grafo Preferential Attachment.\\
+che risiede all'interno dell'estensione ``network'' verrà creato un grafo di \emph{num-nodes} nodi con le proprietà 
+del grafo Preferential Attachment. L'algoritmo di PA implementato in NetLogo crea per ogni nuovo nodo un solo collegamento. \\
 In figura \ref{img:preferential_attachment} è presente una rappresentazione grafica del grafo.
 
 \begin{figure}[!ht]
@@ -156,8 +154,8 @@ La libreria è formata essenzialmente da tre parti:
  \item ui: Il package che permette di visualizzare e dare un layout al grafo.
 \end{itemize}
 I grafi che verranno utilizzati nelle simulazioni sono stati creati da un'applicazione implementata appositamente.
-Una volta creati vengono salvati su file in formato GraphML~\cite{biblio:graphml} per poter 
-essere caricati dalla simulazione NetLogo. 
+Una volta creati, questi grafi vengono salvati su file in formato GraphML~\cite{biblio:graphml} per dar modo di 
+essere caricati dalla simulazione di NetLogo. \\
 In figura \ref{img:dorogovtsev_mendes} è presente una rappresentazione grafica del grafo.
 
 
@@ -216,7 +214,7 @@ presenti nel grafico di figura~\ref{img:age_distribution_social}.
 Sono stati inclusi solo i tre che vengono  mostrati in figura ~\ref{img:gui_main} per via della loro popolarità.
 In alcune simulazioni esiste la necessità di creare condizioni particolari che non possono essere risolte con i dati 
 di questi Social Netwoks.
-Per rendere l'applicazione più generale possibile infatti sono stati implementati anche 5 cursori che permettono di far 
+Per rendere l'applicazione più generale possibile sono stati implementati anche 5 cursori che permettono di far 
 decidere all'utilizzatore dei parametri personalizzati.
 Ognuno di questi cursori serve per impostare la percentuale di utenti facente parte della suddetta fascia d'età.
 Per semplicità sono stati chiamati:\\``\%-<fascia età inizio>-<fascia età fine>''.
@@ -232,25 +230,36 @@ Si può vedere la loro implementazione nell'esempio in figura~\ref{img:gui_main}
 
 
 
+\begin{wrapfigure}{r}{0.40\textwidth}
+  \vspace*{-20pt}
+  \begin{center}
+    \includegraphics[width=0.35\textwidth]{img/gui-first-second-test.png}
+  \end{center}
+ \vspace*{-10pt}
+ \caption{GUI: 
+ pulsanti per dare il via ai primi due test}
+ \vspace*{-10pt}
+ \label{img:gui_first_second_test}
+\end{wrapfigure}
 Per calcolare quanti utenti devono essere presenti per ogni intervallo di età bisogna premere il pulsante ''Setup Age Distribution``.
 Il pulsante ''Setup Social Netwoks``, invece, serve a resettare i dati base degli utenti, riportando la simulazione 
 allo stato iniziale, senza eliminare ne il grafo ne la distribuzione dell'età.
 Per stato iniziale della simulazione si intende posizionare nell'hub la notizia, facendolo diventare uno ``Spreader''.
-In tutti gli altri utenti del grafo verrà impostato lo stato ``Ignorant'' e sarà calcolato un nuovo valore di 
+In tutti gli altri utenti del grafo verrà, invece, impostato lo stato ``Ignorant'' e sarà calcolato un nuovo valore di 
 astensione alla notizia.
 
 Sono presenti altri 5 cursori, mostrati in figura~\ref{img:gui_news}, che identificano l'intensità con cui la notizia è forte 
 verso un certo gruppo di utenti. 
 Viene definita come\\
-``p-<fascia età inizio>-<fascia età fine>'' per indicare la probabilità di condivisione che ha sulla particolare
+``p-<fascia età inizio>-<fascia età fine>'' per indicare la probabilità di condivisione che la notizia ha sulla particolare
 fascia d'età.
 Nell'esempio in figura~\ref{img:gui_news} la probabilità nel primo gruppo vale 1.0, ovvero la condivisione avrà \emph{sempre} esito positivo.
-In caso contrario 
+In caso contrario nel quinto gruppo la probabilità è 0 perciò la condivisione avrà sempre esito negativo. 
+Nei casi intermedi viene confrontato il valore di astensione dell'utente al valore del cursore dell'età dell'utente come è stato definito 
+in fase di progettazione (Sezione ~\ref{section:progettazione}).
 
-%gui-first-second-test.png
-
-
-
+I pulsanti presenti in figura~\ref{img:gui_first_second_test} danno la possibilità di far partire la simulazione per il primo e secondo obiettivo.
+Più precisamente per la prima simulazione è 
 
 
 
