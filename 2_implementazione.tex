@@ -97,7 +97,7 @@ API~\cite{biblio:netlogo_dictionary} fornite dal linguaggio stesso.
 
 
 \subsection{Topologie dei grafi}
-\label{section:preferential_attachment}
+\label{section:graph_topologies}
 \vspace{3 mm}
 
 
@@ -111,10 +111,11 @@ Tanto da avere una propria API per la creazione nel dizionario di NetLogo.
 
 Invocando la funzione:
 \begin{lstlisting}[label=some-code, style=custom_code]
-nw:generate-preferential-attachment turtles links N_NODES
+ generate-preferential-attachment turtles links num-nodes
 \end{lstlisting}
-che risiede all'interno dell'estensione ``network'' verrà creato un grafo di N\_NODES con le proprietà 
-del grafo Preferential Attachment.
+
+che risiede all'interno dell'estensione ``network'' verrà creato un grafo di num-nodes con le proprietà 
+del grafo Preferential Attachment.\\
 In figura \ref{img:preferential_attachment} è presente una rappresentazione grafica del grafo.
 
 
@@ -128,23 +129,20 @@ La libreria è formata essenzialmente da tre parti:
 \end{itemize}
 I grafi che verranno utilizzati nelle simulazioni sono stati creati da un'applicazione implementata appositamente.
 Una volta creati vengono salvati su file in formato GraphML~\cite{biblio:graphml} per poter 
-essere importati dalla simulazione NetLogo.
-
+essere caricati dalla simulazione NetLogo. 
+Nella figura~\ref{img:gui_main} si può notare il pulsante per importare il file GraphML.\\
 In figura \ref{img:dorogovtsev_mendes} è presente una rappresentazione grafica del grafo.
-
-
-
 
 \begin{figure}[!ht]
  \centerline{
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.42\textwidth}
     \includegraphics[width=1.0\textwidth]{img/preferential-attachment-graph.eps}
     \caption{Preferential Attachment}
     \label{img:preferential_attachment}
   \end{subfigure}
   \qquad
   \qquad
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.42\textwidth}
     \includegraphics[width=1.0\textwidth]{img/dorogovtsev-mendes-graph.eps}
     \caption{Dorogovtsev e Mendes}
     \label{img:dorogovtsev_mendes}
@@ -157,8 +155,67 @@ In figura \ref{img:dorogovtsev_mendes} è presente una rappresentazione grafica 
 
 
 
+\subsection{Interfaccia grafica per la configurazione della rete}
+\label{section:gui_setup_graph}
+\vspace{3 mm}
+
+\begin{wrapfigure}{r}{0.37\textwidth}
+  \vspace{-40pt}
+  \begin{center}
+    \includegraphics[width=0.30\textwidth]{img/gui-graph.png}
+  \end{center}
+ \vspace{-10pt}
+ \caption{GUI per la creazione/importazione del grafo}
+ \vspace{-10pt}
+ \label{img:gui_graph}
+\end{wrapfigure}
+Al fine di portare a termine gli obiettivi in precedenza descritti è stato necessario importare nel progetto, 
+dal grafico di figura~\ref{img:age_distribution_social}, i dati di alcuni Social Netwoks.
 
 
+\begin{wrapfigure}{l}{0.37\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.30\textwidth]{img/gui-main.png}
+  \end{center}
+ \vspace{-10pt}
+ \caption{GUI principale: 
+ scelta del Social Netwoks;
+ pulsante per il calcolo della distribuzione delle età;
+ pulsante per l'inizializzazione dei nodi.}
+ \vspace{-10pt}
+ \label{img:gui_main}
+\end{wrapfigure}
+
+Sono stati selezionati solo i tre che seguono per via della loro popolarità:
+\begin{itemize}
+ \item Facebook
+ \item Twitter
+ \item Google+
+\end{itemize}
+
+Per rendere l'applicazione più generale possibile sono stati implementati anche 5 cursori che permettono di far 
+decidere all'utilizzatore dei parametri personalizzati e che per semplicità intuitiva sono 
+stati chiamati:\\ ``\%-<fascia età inizio>-<fascia età fine>.
+Si può vedere la loro implementazione in figura~\ref{img:gui_main}.
+
+
+
+L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
+permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
+Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
+L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
+permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
+Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
+L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
+permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
+Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
+L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
+permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
+Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
+L'ultimo obiettivo, invece, servirà ad analizzare un'interazione tra 2 diversi gruppi di utenti, che 
+permetterà di studiare il numero di visualizzazioni della notizia in casi più complessi.
+Un esempio potrebbe essere quello di voler dividere il numero totale delle persone in due sottoinsiemi così formati
 
 
 

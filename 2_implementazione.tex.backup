@@ -96,8 +96,8 @@ ha risposto brillantemente alle esigenze implementative avendo una sintassi semp
 API~\cite{biblio:netlogo_dictionary} fornite dal linguaggio stesso.
 
 
-\subsection{Modelli dei grafi}
-\label{section:preferential_attachment}
+\subsection{Topologie dei grafi}
+\label{section:graph_topologies}
 \vspace{3 mm}
 
 
@@ -113,8 +113,10 @@ Invocando la funzione:
 \begin{lstlisting}[label=some-code, style=custom_code]
 nw:generate-preferential-attachment turtles links N_NODES
 \end{lstlisting}
+
 che risiede all'interno dell'estensione ``network'' verrà creato un grafo di N\_NODES con le proprietà 
 del grafo Preferential Attachment.
+In figura \ref{img:preferential_attachment} è presente una rappresentazione grafica del grafo.
 
 
 \subsubsection{Modello di Dorogovtsev e Mendes}
@@ -125,16 +127,65 @@ La libreria è formata essenzialmente da tre parti:
  \item algo: Il package dove sono implementati tutti gli algoritmi e i generatori della libreria;
  \item ui: Il package che permette di visualizzare e dare un layout al grafo.
 \end{itemize}
+I grafi che verranno utilizzati nelle simulazioni sono stati creati da un'applicazione implementata appositamente.
+Una volta creati vengono salvati su file in formato GraphML~\cite{biblio:graphml} per poter 
+essere importati dalla simulazione NetLogo.
+
+In figura \ref{img:dorogovtsev_mendes} è presente una rappresentazione grafica del grafo.
+
+\begin{figure}[!ht]
+ \centerline{
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=1.0\textwidth]{img/preferential-attachment-graph.eps}
+    \caption{Preferential Attachment}
+    \label{img:preferential_attachment}
+  \end{subfigure}
+  \qquad
+  \qquad
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=1.0\textwidth]{img/dorogovtsev-mendes-graph.eps}
+    \caption{Dorogovtsev e Mendes}
+    \label{img:dorogovtsev_mendes}
+  \end{subfigure}
+ }
+ \caption{Rappresentazione grafica delle due topologie di grafo studiate.}
+ \label{img:graph_models}
+\end{figure}
 
 
 
 
 
+\subsection{Distribuzione dell'età}
+\label{section:age_distribution}
+\vspace{3 mm}
 
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.35\textwidth]{img/gui-main.png}
+  \end{center}
+ \caption{GUI principale: 
+ scelta del Social Netwoks;
+ pulsante per il calcolo della distribuzione delle età;
+ pulsante per l'inizializzazione dei nodi.}
+ \vspace{-20pt}
+ \label{img:gui_main}
+\end{wrapfigure}
+Al fine di portare a termine gli obiettivi in precedenza descritti è stato necessario importare nel progetto, 
+dal grafico di figura~\ref{img:age_distribution_social}, i dati di alcuni Social Netwoks.
 
+Sono stati selezionati solo i tre che seguono per via della loro popolarità:
+\begin{itemize}
+ \item Facebook
+ \item Twitter
+ \item Google+
+\end{itemize}
 
-
-
+Per rendere l'applicazione più generale possibile sono stati implementati anche 5 cursori che permettono di far 
+decidere all'utilizzatore dei parametri personalizzati e che per semplicità intuitiva sono 
+stati chiamati: ``\%-<fascia età inizio>-<fascia età fine>.
+Si può vedere la loro implementazione in figura~\ref{img:gui_main}.
 
 
 
