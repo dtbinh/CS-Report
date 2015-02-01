@@ -126,12 +126,6 @@ to setup-age-distribution
   ]
   if social-network-type = "custom Social Network" [
     set ages (list %-16-24 %-25-34 %-35-44 %-45-54 %-55-64)
-    
-;    set ages lput %-16-24 []
-;    set ages lput %-25-34 ages
-;    set ages lput %-35-44 ages
-;    set ages lput %-45-54 ages
-;    set ages lput %-55-64 ages
   ]
   
   if  (sum ages != 100) [
@@ -338,57 +332,23 @@ to average-100-only-p-16-24
   reset-plots
   reset-ticks
   
+  set social-network-type "custom Social Network"
+  set %-16-24 100
+  set %-25-34 0
+  set %-35-44 0
+  set %-45-54 0
+  set %-55-64 0
+  
+  setup-age-distribution
+  setup-turtles
+  
   let step-float 0.05
   
   while [ticks * step-float <= 1.0] [    
     set p-16-24 (ticks * step-float)
-    set run-res run-test 100    
+    set run-res run-test 100
     tick
   ]
-end
-
-to average-100-p-16-24-and-25-34
-  
-  ;file-close
-  ;stop
-  
-  reset-plots
-  reset-ticks
-  
-  request-output-file
-  if (not is-string? filename) [ error "File does not exist." ]
-  
-  let step-float 0.05
-  
-  ; record the columns names
-  let temp 0
-  let col-names []
-  while [temp * step-float <= 1.0] [  
-    set col-names lput (temp * step-float) col-names
-    set temp (temp + 1)
-  ]
-  write-csv filename col-names
-  
-  ; for each probabilities
-  let i-p-16-24 0
-  while [i-p-16-24 * step-float <= 1.0] [
-    
-    set p-16-24 (i-p-16-24 * step-float)
-    let runs-values (list (i-p-16-24 * step-float))
-    
-    let i-p-25-34 0
-    while [i-p-25-34 * step-float <= 1.0] [
-      set p-25-34 (i-p-25-34 * step-float)    
-      set run-res run-test 100
-      set runs-values lput (sum run-res) runs-values
-      set i-p-25-34 (i-p-25-34 + 1)
-    ]
-    
-    write-csv filename runs-values
-    
-    set i-p-16-24 (i-p-16-24 + 1)
-  ]
-  file-close
 end
 
 to average-100-p-16-to-64-diagonal
@@ -444,13 +404,8 @@ to-report random-weibull [alpha beta]
 end
 
 to calc-weibull
-  ifelse (weibull-alpha-great-sharers = weibull-alpha-little-sharers) [
-    set weibull-values n-values 1000000 [(random-weibull weibull-alpha-great-sharers weibull-beta) ]
-    set one-minus-weibull-values (map [1 - ?] weibull-values)
-  ] [
-    set weibull-values n-values 1000000 [(random-weibull weibull-alpha-great-sharers weibull-beta) ]
-    set one-minus-weibull-values n-values 1000000 [1 - (random-weibull weibull-alpha-little-sharers weibull-beta) ]
-  ]
+  set weibull-values n-values 1000000 [(random-weibull weibull-alpha-great-sharers weibull-beta) ]
+  set one-minus-weibull-values n-values 1000000 [1 - (random-weibull weibull-alpha-little-sharers weibull-beta) ]
 end
 
 to-report run-test-chance-of-abstention [ times ]
@@ -536,54 +491,17 @@ to great-sharers-in-comparison-to-little-sharers
   update-plots  
 end
 
-to great-sharers-in-comparison-to-little-sharers-all-tests
+to great-sharers-in-comparison-to-little-sharers-all-tests [alpha-little-sharers]
   
-  request-output-file
-  if (not is-string? filename) [ error "File does not exist." ]
-
-  write-csv filename (list "rumor's strength" "# many" "# few" "alpha hs" "alpha ls" "beta" "many who have heard" "few who have heard" "total who have heard")
-
-  set strength-of-rumor 0.50
-  while [strength-of-rumor <= 1] [
-    
-    set weibull-alpha-great-sharers 0.25
-    while [weibull-alpha-great-sharers <= 1] [
-      
-      let %-step 10
-      while [%-step <= 90] [
-        
-        set polulation-%-little-sharers (100 - %-step)
-        set polulation-%-great-sharers %-step
-        
-        great-sharers-in-comparison-to-little-sharers
-        
-        let many item 0 run-res
-        let few item 4 run-res  
   
-        write-csv filename (list 
-          strength-of-rumor                     ; "rumor's strength"
-          (item 0 count-turtles-grouped-by-age) ; "# many"
-          (item 4 count-turtles-grouped-by-age) ; "# few" 
-          weibull-alpha-great-sharers weibull-alpha-little-sharers weibull-beta            ; "alpha" "beta" 
-          many few (many + few)                 ; "many who have heard" "few who have heard" "total who have heard"
-        )
-        set %-step (%-step + 5)
-      ]
-      set weibull-alpha-great-sharers (weibull-alpha-great-sharers + 0.25)
-    ]    
-    set strength-of-rumor (strength-of-rumor + 0.1)
-  ]
-  file-close
-end
-
-to great-sharers-in-comparison-to-little-sharers-all-tests-2
+  set weibull-alpha-little-sharers alpha-little-sharers
   
   request-output-file
   if (not is-string? filename) [ error "File does not exist." ]
 
   write-csv filename (list "rumor's strength" "# great sharers" "# little sharers" "alpha LS" "tot - alpha GS: 0.25" "tot - alpha GS: 0.50" "tot - alpha GS: 0.75" "tot - alpha GS: 1.0")
 
-  
+
   foreach [0.50 0.60 0.70 0.75 0.80 0.90] [
   
     set strength-of-rumor ?
@@ -851,9 +769,9 @@ HORIZONTAL
 
 BUTTON
 2
-813
+811
 87
-846
+844
 NIL
 go
 NIL
@@ -868,9 +786,9 @@ NIL
 
 BUTTON
 88
-813
+811
 173
-846
+844
 NIL
 go
 T
@@ -922,9 +840,9 @@ TEXTBOX
 
 BUTTON
 2
-487
+485
 174
-520
+518
 Setup Age distribution
 setup-age-distribution
 NIL
@@ -939,9 +857,9 @@ NIL
 
 BUTTON
 2
-550
+548
 174
-583
+581
 Setup Social Network
 setup-turtles
 NIL
@@ -956,9 +874,9 @@ NIL
 
 TEXTBOX
 2
-462
+460
 168
-488
+486
 3) Calculate and set the age distribution
 10
 0.0
@@ -966,9 +884,9 @@ TEXTBOX
 
 TEXTBOX
 1
-524
+522
 172
-550
+548
 4) Draw & setup all internal variables of the turtles
 10
 0.0
@@ -976,9 +894,9 @@ TEXTBOX
 
 TEXTBOX
 1
-786
+784
 183
-812
+810
 5) Single run: spread the rumor & reset
 10
 0.0
@@ -986,9 +904,9 @@ TEXTBOX
 
 TEXTBOX
 2
-588
+586
 173
-613
+611
 5) Set the spreading probabilities of \"rumor\" for each ages 
 10
 0.0
@@ -996,14 +914,14 @@ TEXTBOX
 
 SLIDER
 2
-614
+612
 174
-647
+645
 p-16-24
 p-16-24
 0
 1
-1
+0.9
 0.05
 1
 NIL
@@ -1011,14 +929,14 @@ HORIZONTAL
 
 SLIDER
 2
-647
+645
 174
-680
+678
 p-25-34
 p-25-34
 0
 1
-1
+0.8
 0.05
 1
 NIL
@@ -1026,14 +944,14 @@ HORIZONTAL
 
 SLIDER
 2
-680
+678
 174
-713
+711
 p-35-44
 p-35-44
 0
 1
-1
+0.5
 0.05
 1
 NIL
@@ -1041,14 +959,14 @@ HORIZONTAL
 
 SLIDER
 2
-713
+711
 174
-746
+744
 p-45-54
 p-45-54
 0
 1
-1
+0.4
 0.05
 1
 NIL
@@ -1056,14 +974,14 @@ HORIZONTAL
 
 SLIDER
 2
-746
+744
 174
-779
+777
 p-55-64
 p-55-64
 0
 1
-1
+0.9
 0.05
 1
 NIL
@@ -1071,9 +989,9 @@ HORIZONTAL
 
 BUTTON
 2
-847
+845
 173
-880
+878
 Reset Last Run
 reset-last-run
 NIL
@@ -1108,9 +1026,9 @@ PENS
 
 TEXTBOX
 15
-276
+274
 165
-294
+292
 NIL
 12
 0.0
@@ -1118,9 +1036,9 @@ NIL
 
 TEXTBOX
 3
-264
+262
 179
-303
+301
 Use the following sliders if you want to create a custom Social Network
 10
 0.0
@@ -1128,14 +1046,14 @@ Use the following sliders if you want to create a custom Social Network
 
 SLIDER
 2
-289
+287
 175
-322
+320
 %-16-24
 %-16-24
 0
 100
-100
+10
 1
 1
 NIL
@@ -1143,9 +1061,9 @@ HORIZONTAL
 
 SLIDER
 2
-322
+320
 175
-355
+353
 %-25-34
 %-25-34
 0
@@ -1158,9 +1076,9 @@ HORIZONTAL
 
 SLIDER
 2
-355
+353
 175
-388
+386
 %-35-44
 %-35-44
 0
@@ -1173,9 +1091,9 @@ HORIZONTAL
 
 SLIDER
 2
-388
+386
 175
-421
+419
 %-45-54
 %-45-54
 0
@@ -1188,14 +1106,14 @@ HORIZONTAL
 
 SLIDER
 2
-421
+419
 175
-454
+452
 %-55-64
 %-55-64
 0
 100
-0
+90
 1
 1
 NIL
@@ -1206,7 +1124,7 @@ BUTTON
 1124
 251
 1157
-100 TEST - ONE AGE GROUP
+100 Test - One Group
 average-100-only-p-16-24
 NIL
 1
@@ -1262,8 +1180,8 @@ CHOOSER
 162
 graphml-file
 graphml-file
-"GS_10.xml" "GS_100.xml" "GS_300.xml" "GS_500.xml" "GS_5000.xml"
-1
+"GS_100.xml" "GS_300.xml" "GS_500.xml" "GS_5000.xml"
+2
 
 BUTTON
 2
@@ -1301,28 +1219,11 @@ NIL
 
 BUTTON
 2
-1190
-251
-1223
-100 TEST - ALL AGE GROUPS DIAGONAL
-average-100-p-16-to-64-diagonal
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-2
 1157
 251
 1190
-100 TEST - TWO AGE GROUPS
-average-100-p-16-24-and-25-34
+100Test - All Groups Diagonal
+average-100-p-16-to-64-diagonal
 NIL
 1
 T
@@ -1350,14 +1251,14 @@ SWITCH
 1124
 shuffle-ages-each-run
 shuffle-ages-each-run
-0
+1
 1
 -1000
 
 BUTTON
 2
 1621
-259
+206
 1654
 Great Sharers vs. Little Sharers
 great-sharers-in-comparison-to-little-sharers
@@ -1373,8 +1274,8 @@ NIL
 
 TEXTBOX
 3
-1241
-251
+1218
+205
 1384
 7) Great sharers in comparison with a little sharers.\nIn order to do this test you have to set 'weibull-alpha-great-sharers', 'weibull-alpha-little-sharers' and 'weibull-beta'. After doing that you will obtain a modified curve of Weibull probability density function for both groups.\nYou also have to set the percentage of users for each group and the rumor's strength.\nLastly you will have to press the last button to launch the test, which will print in \"Command Center\" the average of 100 runs. 
 10
@@ -1384,7 +1285,7 @@ TEXTBOX
 SLIDER
 2
 1390
-251
+206
 1423
 weibull-alpha-little-sharers
 weibull-alpha-little-sharers
@@ -1399,12 +1300,12 @@ HORIZONTAL
 SLIDER
 2
 1456
-251
+206
 1489
 weibull-beta
 weibull-beta
-0
-1
+0.05
+3
 1
 0.05
 1
@@ -1414,7 +1315,7 @@ HORIZONTAL
 SLIDER
 2
 1522
-251
+206
 1555
 polulation-%-little-sharers
 polulation-%-little-sharers
@@ -1429,7 +1330,7 @@ HORIZONTAL
 SLIDER
 2
 1555
-251
+206
 1588
 polulation-%-great-sharers
 polulation-%-great-sharers
@@ -1480,9 +1381,9 @@ PENS
 BUTTON
 2
 1489
-251
+206
 1522
-Calculate Prob. Density with α and β
+Plot density with α and β
 calc-weibull\nsetup-plots
 NIL
 1
@@ -1497,7 +1398,7 @@ NIL
 SLIDER
 2
 1588
-251
+206
 1621
 strength-of-rumor
 strength-of-rumor
@@ -1512,13 +1413,13 @@ HORIZONTAL
 SLIDER
 2
 1423
-251
+206
 1456
 weibull-alpha-great-sharers
 weibull-alpha-great-sharers
 0
 1
-0.25
+0.75
 0.05
 1
 NIL

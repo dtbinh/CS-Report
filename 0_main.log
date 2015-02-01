@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  1 FEB 2015 05:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  1 FEB 2015 06:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1060,7 +1060,7 @@ rface-test-1-dorogovtsev-mendes-chart.png>]
 File: charts/last-test-str_0.5.pdf Graphic file (type pdf)
 
 <use charts/last-test-str_0.5.pdf>
-Package pdftex.def Info: charts/last-test-str_0.5.pdf used on input line 108.
+Package pdftex.def Info: charts/last-test-str_0.5.pdf used on input line 110.
 (pdftex.def)             Requested size: 347.12354pt x 179.00705pt.
 ) (./4_conclusioni.tex [13 <./charts/last-test-str_0.5.pdf>]) [14] (./5_bibliog
 rafia.tex
@@ -1117,7 +1117,7 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmtt9.pfb>
-Output written on 0_main.pdf (15 pages, 516647 bytes).
+Output written on 0_main.pdf (15 pages, 516654 bytes).
 PDF statistics:
  427 PDF objects out of 1000 (max. 8388607)
  324 compressed objects within 4 object streams
