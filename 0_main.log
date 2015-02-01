@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  1 FEB 2015 06:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  1 FEB 2015 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -778,11 +778,7 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subtable=\count159
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
-(./0_main.aux
-
-LaTeX Warning: Label `img:graph_models' multiply defined.
-
-)
+(./0_main.aux)
 \openout1 = `0_main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
@@ -1018,21 +1014,22 @@ Package pdftex.def Info: img/gui-first-second-test.png used on input line 255.
  [7 <./img/gui-news.png> <./img/gui-first-second-test.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 324.
- [8] <img/gui-third-test.png, id=217, 206.7725pt x 266.9975pt>
+ [8] <img/gui-third-test.png, id=218, 206.7725pt x 266.9975pt>
 File: img/gui-third-test.png Graphic file (type png)
 
 <use img/gui-third-test.png>
-Package pdftex.def Info: img/gui-third-test.png used on input line 356.
+Package pdftex.def Info: img/gui-third-test.png used on input line 358.
 (pdftex.def)             Requested size: 97.19415pt x 125.50513pt.
  [9 <./img/gui-third-test.png>]
-<img/weibull-alpha-0.75.png, id=233, 833.1125pt x 237.88875pt>
+<img/weibull-alpha-0.75.png, id=234, 833.1125pt x 237.88875pt>
 File: img/weibull-alpha-0.75.png Graphic file (type png)
 
 <use img/weibull-alpha-0.75.png>
-Package pdftex.def Info: img/weibull-alpha-0.75.png used on input line 389.
+Package pdftex.def Info: img/weibull-alpha-0.75.png used on input line 391.
 (pdftex.def)             Requested size: 381.838pt x 109.03085pt.
-) (./3_risultati.tex [10 <./img/weibull-alpha-0.75.png>]
-<img/interface-test-1-preferential-attachment-chart.png, id=253, 416.55624pt x 
+ [10 <./img/weibull-alpha-0.75.png>])
+(./3_risultati.tex [11]
+<img/interface-test-1-preferential-attachment-chart.png, id=258, 416.55624pt x 
 266.9975pt>
 File: img/interface-test-1-preferential-attachment-chart.png Graphic file (type
  png)
@@ -1041,7 +1038,7 @@ Package pdftex.def Info: img/interface-test-1-preferential-attachment-chart.png
  used on input line 33.
 (pdftex.def)             Requested size: 173.56177pt x 111.24596pt.
 
-<img/interface-test-1-dorogovtsev-mendes-chart.png, id=254, 416.55624pt x 266.9
+<img/interface-test-1-dorogovtsev-mendes-chart.png, id=259, 416.55624pt x 266.9
 975pt>
 File: img/interface-test-1-dorogovtsev-mendes-chart.png Graphic file (type png)
 
@@ -1054,16 +1051,44 @@ Overfull \hbox (2.05554pt too wide) in paragraph at lines 31--45
 []$[]$ $[]$ 
  []
 
-[11] [12 <./img/interface-test-1-preferential-attachment-chart.png> <./img/inte
-rface-test-1-dorogovtsev-mendes-chart.png>]
-<charts/last-test-str_0.5.pdf, id=273, 799.98875pt x 412.54124pt>
+[12 <./img/interface-test-1-preferential-attachment-chart.png> <./img/interface
+-test-1-dorogovtsev-mendes-chart.png>]
+<charts/second-test-fb.pdf, id=270, 387.4475pt x 313.17pt>
+File: charts/second-test-fb.pdf Graphic file (type pdf)
+
+<use charts/second-test-fb.pdf>
+Package pdftex.def Info: charts/second-test-fb.pdf used on input line 87.
+(pdftex.def)             Requested size: 111.08206pt x 89.78479pt.
+
+<charts/second-test-tw.pdf, id=271, 387.4475pt x 313.17pt>
+File: charts/second-test-tw.pdf Graphic file (type pdf)
+
+<use charts/second-test-tw.pdf>
+Package pdftex.def Info: charts/second-test-tw.pdf used on input line 95.
+(pdftex.def)             Requested size: 111.08206pt x 89.78479pt.
+
+<charts/second-test-gp.pdf, id=272, 387.4475pt x 313.17pt>
+File: charts/second-test-gp.pdf Graphic file (type pdf)
+
+<use charts/second-test-gp.pdf>
+Package pdftex.def Info: charts/second-test-gp.pdf used on input line 103.
+(pdftex.def)             Requested size: 111.08206pt x 89.78479pt.
+ [13 <./charts/second-test-fb.pdf> <./charts/second-test-tw.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./charts/second-test-tw.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./charts/second-test-gp.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./charts/second-test-gp.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>] <charts/last-test-str_0.5.pdf, id=305, 799.98875pt x 412.54124pt>
 File: charts/last-test-str_0.5.pdf Graphic file (type pdf)
 
 <use charts/last-test-str_0.5.pdf>
-Package pdftex.def Info: charts/last-test-str_0.5.pdf used on input line 110.
+Package pdftex.def Info: charts/last-test-str_0.5.pdf used on input line 150.
 (pdftex.def)             Requested size: 347.12354pt x 179.00705pt.
-) (./4_conclusioni.tex [13 <./charts/last-test-str_0.5.pdf>]) [14] (./5_bibliog
-rafia.tex
+) (./4_conclusioni.tex) [14]
+(./5_bibliografia.tex
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 [][]$\T1/lmr/m/n/9 http : / / www . barabasilab . com / pubs / CCNR -[] ALB _ P
 ublications / 199910 -[] 15 _
@@ -1075,9 +1100,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--31
 -[] distribution -[] of -[] active -[] social -[]
  []
 
-)
+[15 <./charts/last-test-str_0.5.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
- [15]
+ [16]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./0_main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
@@ -1088,16 +1113,13 @@ Package rerunfilecheck Info: File `0_main.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 10787 strings out of 495017
- 156714 string characters out of 6181021
- 253724 words of memory out of 5000000
- 13710 multiletter control sequences out of 15000+600000
+ 10809 strings out of 495017
+ 157291 string characters out of 6181021
+ 254087 words of memory out of 5000000
+ 13730 multiletter control sequences out of 15000+600000
  71451 words of font info for 47 fonts, out of 8000000 for 9000
  29 hyphenation exceptions out of 8191
  36i,9n,43p,311b,1095s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1117,10 +1139,10 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmtt9.pfb>
-Output written on 0_main.pdf (15 pages, 516654 bytes).
+Output written on 0_main.pdf (16 pages, 587409 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 458 PDF objects out of 1000 (max. 8388607)
+ 345 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

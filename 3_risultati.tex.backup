@@ -43,26 +43,66 @@ Per questo test abbiamo bisogno di:
     \label{img:result_test_1_dm}
   \end{subfigure}
  \caption{Risultati del primo test}
- \label{img:graph_models}
+ \label{img:results_test_1}
 \end{figure}
 
 
 Con il grafo descritto da Barabási e Albert si ottiene il risultato che viene mostrato nel grafico di figura \ref{img:result_test_1_pa}.
 Come si nota ha una crescita molto lenta e solo dopo che la probabilità di condivisione ha superato il valore di 0.5 si ha una salita.
 La topologia descritta da Dorogovtsev e Mendes invece si comporta molto meglio e viene mostrata nel grafico in figura \ref{img:result_test_1_dm}.
-Ha una crescita lineare e alla fine, quando la forza è attorno l'85\% crea una ``pancia'' verso l'alto che sta a dimostrare l'altissima 
+Ha una crescita quasi lineare e alla fine, quando la forza è attorno l'85\% crea una ``pancia'' verso l'alto che sta a dimostrare l'altissima 
 condivisione.
 
 Il primo grafo è molto svantaggiato per via della sua struttura. Come abbiamo detto in fase di progettazione (Capitolo \ref{section:progettazione}) 
 questo grafo non presenta cricche al suo interno.
 Questa proprietà lo penalizza nelle simulazioni che sono basate sul numero di visualizzazioni e perciò sulla probabilità di condivisione.
+Nel modello descritto da Dorogovtsev e Mendes invece sono presenti cricche al suo interno e possiede quasi il doppio dei link del Preferential Attachment.
+
+Per i motivi appena esposti si è optato di affrontare i prossimi test con la seconda topologia.
+
 Inoltre, anche se è solo un punto di vista dell'autore, si può notare in questo modello di grafo una 
 maggior somiglianza con la topologia più comune di un Social Network.
 
-%1 test: Questa proprietà lo penalizza nelle simulazioni che sono basate sul numero di visualizzazioni e perciò sulla probabilità di condivisione. 
-% inoltre, anche se è solo un punto di vista dell'autore, si può notare in questo modello di grafo una 
-% maggior somiglianza con la topologia più comune di un Social Network.
-% poche connessioni 499 -> 997
+
+\subsection{Secondo test}
+\label{section:second_test}
+
+
+Dopo aver deciso quale fosse il modello di grafo migliore
+
+
+
+
+
+
+\begin{figure}[!ht]
+  \begin{subfigure}[l]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-fb.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Facebook}
+    \label{img:result_test_2_fb}
+  \end{subfigure}  
+  \begin{subfigure}[c]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-tw.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Twitter}
+    \label{img:result_test_2_tw}
+  \end{subfigure}  
+  \begin{subfigure}[r]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-gp.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Google+}
+    \label{img:result_test_2_gp}
+  \end{subfigure}  
+ \caption{Risultati del secondo test}
+ \label{img:results_test_2}
+\end{figure}
 
 
 
@@ -100,7 +140,7 @@ ottenendo una densità di probabilità come in figura \ref{img:weibull_alpha_0_7
 
 \begin{figure}[!ht]
 \centerline {
-  \includegraphics[width=1.1\textwidth]{charts/last-test-str_0.5.pdf}
+  \includegraphics[width=1\textwidth]{charts/last-test-str_0.5.pdf}
 }
 \caption{Grafico del risultato dell'ultimo test con forza della notizia pari a $0.50$, 
 500 nodi totali e $\alpha$ del gruppo con bassa probabilità di condivisione = $0.75$}

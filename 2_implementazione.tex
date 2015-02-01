@@ -341,14 +341,16 @@ la percentuale di utenti nei 5 gruppi, impostando il 100\% nel primo gruppo e 0\
 
 Successivamente il test eseguirà la procedura di propagazione della notizia facendo variare la probabilità 
 della notizia per il primo gruppo, quindi il cursore ``p-16-24'', da 0 a 1 con passi di 0.05.
-Si arriverà ad avere un grafico che mostrerà sull'asse X i ticks, ovvero l'avanzamento della simulazione. 
+Si arriverà ad avere un grafico che mostrerà sull'asse X i ticks, ovvero l'avanzamento della simulazione, quindi la forza della notizia. 
 Mentre sull'asse Y ci sarà la media di 100 test del numero di ``Viewers''.
 
 \subsubsection{``100 Test - All Groups Diagonal''}
-La seconda simulazione utilizza invece le \% di utenti definite in precedenza e fa variare la probabilità 
-della notizia da 0 a 1 con step di 0.05 per tutti i gruppi.
-Così facendo si arriverà ad avere un grafico dove sull'asse X ci saranno nuovamente i ticks, ovvero l'avanzamento della simulazione.
-Mentre sull'asse Y ci saranno tutte le medie di 100 test del numero di ``Viewers'' di ogni gruppo.
+La seconda simulazione utilizza invece le percentuali di utenti definite nel grafico della statistica di figura~\ref{img:age_distribution_social}
+facendo variare una delle probabilità della notizia da 0 a 1 con step di 0.05.
+Inzialmente verrà scelto di studiare cosa capita se si fa variare solo la forza della notizia del gruppo più numeroso.
+Successivamente verrà invece analizzato come si comporta la rete quando si fa variare la forza della notizia di tutti i gruppi.
+Così facendo si arriverà ad avere un grafico dove sull'asse X ci saranno nuovamente i ticks, ovvero l'avanzamento della simulazione, quindi la forza della notizia.
+Mentre sull'asse Y ci saranno tutte le medie di 500 test del numero di ``Viewers'' di ogni gruppo.
 
 \begin{wrapfigure}{r}{0.30\textwidth}
   \vspace*{-35pt}
@@ -412,8 +414,8 @@ passando dal 10\% al 90\%. Operazione inversa viene eseguita per le persone con 
 condivisione passando dal 90\% al 10\% della popolazione totale.
 Il terzo ciclo, più interno, invece itera sul parametro $\alpha$ modificando quindi la pendenza della 
 curva per gli individui con alta probabilità di condivisione.
-Come si può notare il paramentro $\alpha$ del gruppo che condivide meno viene preso in ingresso dalla funzione 
-mai toccato.
+Come si può notare il paramentro $\alpha$ del gruppo che condivide meno viene preso in ingresso dalla funzione e
+mai manipolato.
 
 %\vspace*{-80pt}
 \begin{algorithm}

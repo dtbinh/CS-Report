@@ -43,12 +43,12 @@ Per questo test abbiamo bisogno di:
     \label{img:result_test_1_dm}
   \end{subfigure}
  \caption{Risultati del primo test}
- \label{img:graph_models}
+ \label{img:results_test_1}
 \end{figure}
 
 
 Con il grafo descritto da Barabási e Albert si ottiene il risultato che viene mostrato nel grafico di figura \ref{img:result_test_1_pa}.
-Come si nota ha una crescita molto lenta e solo dopo che la probabilità di condivisione ha superato il valore di 0.5 si ha una salita.
+Come si nota ha una crescita molto lenta e solo dopo che la probabilità di condivisione ha superato il valore di 0.5 si ha una salita tangibile.
 La topologia descritta da Dorogovtsev e Mendes invece si comporta molto meglio e viene mostrata nel grafico in figura \ref{img:result_test_1_dm}.
 Ha una crescita quasi lineare e alla fine, quando la forza è attorno l'85\% crea una ``pancia'' verso l'alto che sta a dimostrare l'altissima 
 condivisione.
@@ -56,9 +56,12 @@ condivisione.
 Il primo grafo è molto svantaggiato per via della sua struttura. Come abbiamo detto in fase di progettazione (Capitolo \ref{section:progettazione}) 
 questo grafo non presenta cricche al suo interno.
 Questa proprietà lo penalizza nelle simulazioni che sono basate sul numero di visualizzazioni e perciò sulla probabilità di condivisione.
-Nel modello descritto da Dorogovtsev e Mendes invece sono presenti cricche al suo interno e possiede quasi il doppio dei link del Preferential Attachment.
+Nel modello descritto da Dorogovtsev e Mendes invece sono presenti cricche al suo interno ed il grafo di questo esempio ne è la prova
+avendo quasi il doppio dei link del Preferential Attachment.
 
-Per i motivi appena esposti si è optato di affrontare i prossimi test con la seconda topologia.
+Com'è stato appena esposto, il confronto tra i due modelli di grafo ci ha permesso di assumere che la seconda topologia 
+affronti meglio questo studio.
+Si è perciò optato di sostenere i prossimi test con la seconda topologia realizzata da Dorogovtsev e Mendes.
 
 Inoltre, anche se è solo un punto di vista dell'autore, si può notare in questo modello di grafo una 
 maggior somiglianza con la topologia più comune di un Social Network.
@@ -67,8 +70,45 @@ maggior somiglianza con la topologia più comune di un Social Network.
 \subsection{Secondo test}
 \label{section:second_test}
 
-Questo fa cacca.
+In seguito al confronto studiato nel primo test, ed aver deciso quale fosse il modello di grafo migliore per le analisi, 
+possiamo concentrarci sulla seconda fase definita negli obiettivi.
 
+Questo secondo studio ci permetterà di analizzare come viene condivisa una notizia, con un argomento, viene propagata nei differenti social.
+
+vuole mettere in luce come una notizia, con un topic adatto maggiormente ad una
+> > certa fascia d'età, viene propagata nei differenti social.
+
+% tutti i test poco produttivo
+
+
+\begin{figure}[!ht]
+  \begin{subfigure}[l]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-fb.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Facebook}
+    \label{img:result_test_2_fb}
+  \end{subfigure}  
+  \begin{subfigure}[c]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-tw.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Twitter}
+    \label{img:result_test_2_tw}
+  \end{subfigure}  
+  \begin{subfigure}[r]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-gp.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Google+}
+    \label{img:result_test_2_gp}
+  \end{subfigure}  
+ \caption{Risultati del secondo test}
+ \label{img:results_test_2}
+\end{figure}
 
 
 
