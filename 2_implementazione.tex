@@ -50,10 +50,13 @@ possiamo notare 5 intervalli di anni e quindi stabilire il valore di $N = 5$.
 
 Dobbiamo perciò anche definire 5 gruppi di utenti per distinguere le differenti età.
 Il numero di persone appartenenti ad ogni gruppo verrà semplicemente definito dalla semplice proporzione:
-\begin{equation*}
-N\_NODI\_TOTALI \quad / \quad 100 \quad * \quad \%\_UTENTI\_GRUPPO
-\end{equation*}
-dove $\%\_UTENTI\_GRUPPO$ è la percentuale presente nel grafico di figura ~\ref{img:age_distribution_social}.
+
+\[
+\frac{N\_NODI\_TOTALI}{100} \cdot \%\_UTENTI\_GRUPPO
+\]
+
+%N\_NODI\_TOTALI \quad / \quad 100 \quad * \quad \%\_UTENTI\_GRUPPO
+dove $\%\_UTENTI\_GRUPPO$ è la percentuale presente nel grafico di figura~\ref{img:age_distribution_social}.
 
 A questo punto per la condivisione dell'informazione tra nodo e nodo manca solamente la formula per definire la probabilità 
 della propagazione.
@@ -84,10 +87,13 @@ Le simulazioni previste saranno sviluppate in NetLogo che fornisce un ambiente s
 personalizzabile dove si possono condurre studi in parecchi campi.
 NetLogo è uno strumento di sviluppo per una programmazione basata ad agenti.
 Nel lavoro qui presentato gli agenti in questione saranno gli utenti della rete sociale.
-
 Esistono molti altri simulatori di reti che prevedono una programmazione ad agenti, ma NetLogo
 ha risposto brillantemente alle esigenze implementative avendo una sintassi semplice e una moltitudine di
-API~\cite{biblio:netlogo_dictionary} fornite dal linguaggio stesso.
+API\footnote{\scriptsize Application Programming Interface: un insieme di funzionalità utilizzabili dal programmatore
+}~\cite{biblio:netlogo_dictionary} fornite dal linguaggio stesso. 
+E' stato anche scelto per la facilità con cui si riesce a modellare una 
+interfaccia grafica\footnote{\scriptsize Dall’inglese GUI ovvero Graphical User Interface}.
+
 
 
 \subsection{Topologie dei grafi}
@@ -101,7 +107,7 @@ sono due.
 \subsubsection{Preferential Attachment}
 \label{section:graph_topologies_pa}
 Il modello Preferential Attachment, come già comunicato a inizio capitolo, è altamente diffuso e conosciuto.
-Tanto da avere una propria API per la creazione nel dizionario di NetLogo.
+Tanto da avere una propria API per la creazione nel dizionario di NetLogo. 
 
 Invocando la funzione:
 \begin{lstlisting}[label=some-code, style=custom_code]
@@ -110,12 +116,14 @@ Invocando la funzione:
 
 che risiede all'interno dell'estensione ``network'' verrà creato un grafo di \emph{num-nodes} nodi con le proprietà 
 del grafo Preferential Attachment. L'algoritmo di PA implementato in NetLogo crea per ogni nuovo nodo un solo collegamento. \\
-In figura \ref{img:preferential_attachment} è presente una rappresentazione grafica del grafo.
+In figura \ref{img:preferential_attachment} è presente una rappresentazione grafica di un grafo con 20 nodi.
 
 \begin{figure}[!ht]
  \centerline{
   \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=1.0\textwidth]{img/preferential-attachment-graph.eps}
+    \begin{center}
+      \includegraphics[width=0.75\textwidth]{img/preferential-attachment-graph.eps}
+    \end{center}
     \caption{Preferential Attachment}
     \label{img:preferential_attachment}
   \end{subfigure}
@@ -123,7 +131,9 @@ In figura \ref{img:preferential_attachment} è presente una rappresentazione gra
   \qquad
   \qquad
   \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=1.0\textwidth]{img/dorogovtsev-mendes-graph.eps}
+    \begin{center}
+      \includegraphics[width=0.75\textwidth]{img/dorogovtsev-mendes-graph.eps}
+    \end{center}
     \caption{Dorogovtsev e Mendes}
     \label{img:dorogovtsev_mendes}
   \end{subfigure}
@@ -132,7 +142,7 @@ In figura \ref{img:preferential_attachment} è presente una rappresentazione gra
  \label{img:graph_models}
 \end{figure}
 
-\subsubsection{Modello di Dorogovtsev e Mendes}
+\subsubsection{Rete di Dorogovtsev e Mendes}
 \label{section:graph_topologies_dm}
 
 \begin{wrapfigure}{r}{0.33\textwidth}
@@ -156,11 +166,11 @@ La libreria è formata essenzialmente da tre parti:
 I grafi che verranno utilizzati nelle simulazioni sono stati creati da un'applicazione implementata appositamente.
 Una volta creati, questi grafi vengono salvati su file in formato GraphML~\cite{biblio:graphml} per dar modo di 
 essere caricati dalla simulazione di NetLogo. \\
-In figura \ref{img:dorogovtsev_mendes} è presente una rappresentazione grafica del grafo.
+In figura \ref{img:dorogovtsev_mendes} è presente una rappresentazione grafica di un grafo con 20 nodi.
 
 
 
-\subsection{Interfaccia grafica per la configurazione della rete}
+\subsection{Inizializzazione del Modello}
 \label{section:gui_setup_graph}
 
 \begin{wrapfigure}{l}{0.33\textwidth}
@@ -171,9 +181,9 @@ In figura \ref{img:dorogovtsev_mendes} è presente una rappresentazione grafica 
  \vspace*{-10pt}
  \caption{GUI: 
  scelta del Social Netwoks;
- pulsante per il calcolo della distribuzione delle età;
+ pulsante per il calcolo delle età;
  pulsante per l'inizializzazione dei nodi.}
- \vspace{-23 mm}
+ \vspace{-20 mm}
  \label{img:gui_main}
 \end{wrapfigure}
 
@@ -189,8 +199,8 @@ perciò, qui di seguito, verranno illustrate le caratteristiche principali.
 In figura~\ref{img:gui_graph} si possono notare due pulsanti:
 \begin{itemize}
  \item il primo serve per creare un grafo di tipo Preferential Attachment 
-  (Sezione ~\ref{section:graph_topologies_pa}) con un numero \emph{num-nodes} di nodi.
- \item il secondo invece serve per importare un file GraphML (Sezione ~\ref{section:graph_topologies_dm}) tra 
+  (Capitolo ~\ref{section:graph_topologies_pa}) con un numero \emph{num-nodes} di nodi.
+ \item il secondo invece serve per importare un file GraphML (Capitolo ~\ref{section:graph_topologies_dm}) tra 
   quelli già creati in precedenza.
 \end{itemize}
 
@@ -200,17 +210,7 @@ Dopo aver creato o importato il grafo, viene cercato l'hub della rete, ovvero il
 Un'altra fase necessaria è stata quella di importare nel progetto i dati di alcuni Social Netwoks
 presenti nel grafico di figura~\ref{img:age_distribution_social}.
 
-\begin{wrapfigure}{l}{0.33\textwidth}
-  \vspace*{-20pt}
-  \begin{center}
-    \includegraphics[width=0.28\textwidth]{img/gui-news.png}
-  \end{center}
- \vspace*{-10pt}
- \caption{GUI: 
- cursori per la definizione di una notizia.}
- \vspace*{-10pt}
- \label{img:gui_news}
-\end{wrapfigure}
+
 Sono stati inclusi solo i tre che vengono  mostrati in figura ~\ref{img:gui_main} per via della loro popolarità.
 In alcune simulazioni esiste la necessità di creare condizioni particolari che non possono essere risolte con i dati 
 di questi Social Netwoks.
@@ -228,7 +228,26 @@ Si può vedere la loro implementazione nell'esempio in figura~\ref{img:gui_main}
  \item quelle che hanno tra i 55 e i 64 anni sono il 10\%;
 \end{itemize}
 
-
+\begin{wrapfigure}{l}{0.33\textwidth}
+  \vspace*{-20pt}
+  \begin{center}
+    \includegraphics[width=0.28\textwidth]{img/gui-news.png}
+  \end{center}
+ \vspace*{-10pt}
+ \caption{GUI: 
+ cursori per la definizione di una notizia.}
+ \vspace*{-10pt}
+ \label{img:gui_news}
+\end{wrapfigure}
+Per calcolare quanti utenti devono essere presenti per ogni intervallo di età bisogna premere il pulsante ``Setup Age Distribution''.
+Verrà creato un vettore grande come il numero dei nodi del grafo e al suo interno saranno inseriti gli indici dei 5 gruppi nella 
+quantità prevista dalle percentuali. Questo farà si che ogni nodo del grafo avrà un suo preciso valore nell'array che identificherà il gruppo
+a cui lui appartiene.
+Il pulsante ``Setup Social Netwoks'', invece, serve a resettare i dati base degli utenti, riportando la simulazione 
+allo stato iniziale, senza eliminare ne il grafo ne il vettore delle ``età''.
+Per stato iniziale della simulazione si intende impostare nell'hub la notizia, facendolo diventare uno ``Spreader'' mentre 
+tutti gli altri nodi del grafo verranno fatti diventare ``Ignorant'' e per ciascuno sarà calcolato un nuovo valore di 
+astensione alla notizia.
 
 \begin{wrapfigure}{r}{0.40\textwidth}
   \vspace*{-20pt}
@@ -241,34 +260,176 @@ Si può vedere la loro implementazione nell'esempio in figura~\ref{img:gui_main}
  \vspace*{-10pt}
  \label{img:gui_first_second_test}
 \end{wrapfigure}
-Per calcolare quanti utenti devono essere presenti per ogni intervallo di età bisogna premere il pulsante ''Setup Age Distribution``.
-Il pulsante ''Setup Social Netwoks``, invece, serve a resettare i dati base degli utenti, riportando la simulazione 
-allo stato iniziale, senza eliminare ne il grafo ne la distribuzione dell'età.
-Per stato iniziale della simulazione si intende posizionare nell'hub la notizia, facendolo diventare uno ``Spreader''.
-In tutti gli altri utenti del grafo verrà, invece, impostato lo stato ``Ignorant'' e sarà calcolato un nuovo valore di 
-astensione alla notizia.
-
 Sono presenti altri 5 cursori, mostrati in figura~\ref{img:gui_news}, che identificano l'intensità con cui la notizia è forte 
 verso un certo gruppo di utenti. 
 Viene definita come\\
 ``p-<fascia età inizio>-<fascia età fine>'' per indicare la probabilità di condivisione che la notizia ha sulla particolare
 fascia d'età.
 Nell'esempio in figura~\ref{img:gui_news} la probabilità nel primo gruppo vale 1.0, ovvero la condivisione avrà \emph{sempre} esito positivo.
-In caso contrario nel quinto gruppo la probabilità è 0 perciò la condivisione avrà sempre esito negativo. 
+Con il quinto gruppo avremo un caso contrario dove la probabilità è 0 e la condivisione non andrà mai a buon fine. 
 Nei casi intermedi viene confrontato il valore di astensione dell'utente al valore del cursore dell'età dell'utente come è stato definito 
-in fase di progettazione (Sezione ~\ref{section:progettazione}).
+in fase di progettazione (Capitolo ~\ref{section:progettazione}).
 
-I pulsanti presenti in figura~\ref{img:gui_first_second_test} danno la possibilità di far partire la simulazione per il primo e secondo obiettivo.
-Più precisamente per la prima simulazione viene automaticamente impostato il tipo di Social Netwok a ``custom'' per poter 
-personalizzare la percentuale di utenti nei vari gruppi, impostando il 100\% nel primo gruppo e 0\% negli altri gruppi. 
-A questo punto il test eseguirà la procedura di propagazione della notizia facendo variare la probabilità della notizia da 0 a 1 con step di 0.05 per il primo gruppo.
+I pulsanti presenti in figura~\ref{img:gui_first_second_test} servono a dare il via al test del primo e secondo obiettivo.
+
+\subsection{Sviluppo delle Simulazioni}
+Oltre all'inizializzazione della rete e alla configurazione dei suoi agenti, è stata progettata un'architettura in grado di
+soddisfare gli obiettivi prefissati.
+
+%Anche per questa fase sono stati inseriti dei pulsanti che danno la possibilità di avviare le simulazioni.
+
+
+\subsubsection{Propagazione della Notizia}
+L'algoritmo~\ref{alg:core_spread}, data la sua importanza, è stato definito il nucleo delle simulazioni 
+ed è colui che calcola, ad ogni passo, come la notizia viene propagata. 
+
+\begin{algorithm}
+ \begin{algorithmic}[1]
+    \Procedure{Core}{$nodes, news$}
+      \If {(all $nodes$ have seen the news)}
+	\State \Return END\_OK
+      \Else 
+	\ForAll {($node$ \textbf{in} $nodes$ \textbf{with} [$seen\_news$ = \textbf{false}])}
+	  \If {(\textbf{any} $node_{neighbors}$ \textbf{with} [$shared\_news$ = \textbf{true}])}\\
+	    \Comment{Leggo il valore di probabilità della notizia per l'età del utente corrente}
+	    \State $p\_news \gets news_{prob[node_{age}]}$
+	    
+	    \If { $p\_news \geq node.chance\_of\_abstention$ }
+	      \State $node_{tmp\_shared\_news} \gets \textbf{true}$
+	    \EndIf
+	    \State $node_{tmp\_seen\_news} \gets \textbf{true}$
+	    
+	  \EndIf
+	\EndFor
+	\If {(\textbf{no} $nodes$ \textbf{with} [$tmp\_seen\_news$ = \textbf{True}])}
+	  \State \Return END\_KO
+	\EndIf
+	
+	\ForAll {($node$ \textbf{in} $nodes$ \textbf{with} [$tmp\_seen\_news$ = \textbf{true}])}
+	  \State $node_{seen\_news} \gets \textbf{true}$
+	  \State $node_{tmp\_seen\_news} \gets \textbf{false}$
+	\EndFor
+	
+	\ForAll {($node$ \textbf{in} $nodes$ \textbf{with} [$tmp\_shared\_news$ = \textbf{true}])}
+	  \State $node_{shared\_news} \gets \textbf{true}$
+	  \State $node_{tmp\_shared\_news} \gets \textbf{false}$
+	\EndFor
+      
+	\State \Return SIMULATION\_NOT\_FINISHED\_YET
+      \EndIf
+    \EndProcedure
+ \end{algorithmic}
+ 
+ \caption{Nucleo della propagazione della notizia}
+ \label{alg:core_spread}
+\end{algorithm}
+
+Prima verifica se ci sia qualche nodo che non ha visualizzato la notizia (Riga 2), 
+poi richiede a tutti i nodi ``Ignorants'' se hanno un vicino ``Spreader'' (Riga 5 e 6). 
+In tal caso viene letta la probabilità della notizia rispetto all'età del nodo ``Ignorant'' corrente (Riga 8) e viene eseguito il 
+confrontato con il valore di astensione alla notizia (Riga 9), come stabilito in fase di progettazione descritta nel capitolo~\ref{section:progettazione}. 
+Esiste un'altra funzione altrettanto importante e si occupa di fare la media di $N$ test del numero di ``Viewers''.
+Ad ogni esecuzione però si preoccupa anche di effettuare il reset di tutti gli agenti che prendono parte alla simulazione 
+calcolando, nuovamente, un valore di astensione per ogni nodo e, se richiesto, viene anche rimescolato il 
+vettore che mantiene le età per avere più casualità nei test effettuati.
+
+\subsubsection{``100 Test - One Group''}
+Questo pulsante viene premuto per eseguire la prima simulazione. 
+Come prima azione verrà impostato il Social Netwok di tipo ``custom'', che permetterà di poter personalizzare
+la percentuale di utenti nei 5 gruppi, impostando il 100\% nel primo gruppo e 0\% negli altri gruppi. 
+
+Successivamente il test eseguirà la procedura di propagazione della notizia facendo variare la probabilità 
+della notizia per il primo gruppo, quindi il cursore ``p-16-24'', da 0 a 1 con passi di 0.05.
 Si arriverà ad avere un grafico che mostrerà sull'asse X i ticks, ovvero l'avanzamento della simulazione. 
 Mentre sull'asse Y ci sarà la media di 100 test del numero di ``Viewers''.
 
+\subsubsection{``100 Test - All Groups Diagonal''}
 La seconda simulazione utilizza invece le \% di utenti definite in precedenza e fa variare la probabilità 
 della notizia da 0 a 1 con step di 0.05 per tutti i gruppi.
 Così facendo si arriverà ad avere un grafico dove sull'asse X ci saranno nuovamente i ticks, ovvero l'avanzamento della simulazione.
 Mentre sull'asse Y ci saranno tutte le medie di 100 test del numero di ``Viewers'' di ogni gruppo.
+
+\begin{wrapfigure}{r}{0.33\textwidth}
+  \vspace*{-20pt}
+  \begin{center}
+    \includegraphics[width=0.28\textwidth]{img/gui-third-test.png}
+  \end{center}
+ \vspace*{-10pt}
+ \caption{GUI: 
+ terzo test}
+ \vspace*{-10pt}
+ \label{img:gui_third_test}
+\end{wrapfigure}
+
+
+
+\subsubsection{``Great Sharers vs. Little Sharers''}
+
+L'ultima simulazione è quella che si distingue di più dalle altre dato il concetto che ci sta dietro.
+A differenza dei precedenti test, si vuole studiare il confronto tra due gruppi che si differenziano 
+per la loro probabilità di astensione alla notizia. 
+Nelle prime due simulazioni questo dato veniva deciso da una funzione random che possiede una distribuzione di
+densità lineare.
+In questo test, invece, l'astensione viene calcolata tramite una funzione di distribuzione di probabilità non lineare.
+Quella scelta è la funzione Weibull\cite{biblio:weibull}.
+La funzione ``random-weibull'' fa variare la densità della distribuzione per mezzo di due parametri $\alpha$ e $\beta$.
+Il valore restituito dalla funzione è sempre un numero tra 0 ed 1 perciò, per il calcolo della propagazione della notizia,
+può essere riutilizzato l'algoritmo~\ref{alg:core_spread} mostrato in precedenza.
+In figura~\ref{img:gui_third_test} sono presenti 3 slider per la manipolazione degli $\alpha$ e di $\beta$. 
+Il paramentro $\beta$ fa modificare sopratutto la forma della curva, mentre $\alpha$ la pendenza. 
+Quello che ci serve è una pendenza differente perciò sono stati aggiunti due cursori per i parametri $\alpha$ dei due gruppi.
+In figura~\ref{img:weibull_alpha_0_75} viene mostrato il dislivello di cui si sta parlando.
+Nel primo istogramma, con $X$ più densa vicino a 0, viene permessa una miglior condivisione mentre nel secondo grafico se ne ha una peggiore.
+Non essendoci un dislivello troppo alto, il valore di $\alpha = 0.75`$ consente al gruppo 2 un buon grado di condivisione della notizia.
+
+\begin{figure}[!htb]
+\centerline {
+  \includegraphics[width=1.1\textwidth]{img/weibull-alpha-0.75.png}
+}
+\caption[caption for img/weibull-alpha-0.75.png]{I due istogrammi mostrano la rappresentazione di un vettore $X$ di 1 milione di cifre 
+calcolato mediante la funzione di densità di probabilità Weibull, con $\alpha = 0.75$.
+Il grafico di sinistra rappresenta la distribuzione originale, 
+mentre quello di destra la sua \emph{quasi \protect\footnotemark} speculare calcolata grazie: $\forall x \in X, \quad 1 - x$.}
+\label{img:weibull_alpha_0_75}
+\end{figure}
+\footnotetext{\scriptsize Quando si parla di numeri random non possiamo pretendere di avere lo stesso identico comportamento.} 
+
+
+
+
+
+
+
+
+
+
+Per questa analisi è stato sviluppato un secondo Algoritmo, di tre cicli annidati che permette di considerare
+tutte le possibilità che sono state esposte.\\
+Il primo ciclo più esterno itera su alcuni valori di forza della notizia, 
+ovvero i seguenti: $0.50 \quad 0.60 \quad 0.70 \quad 0.75 \quad 0.80 \quad 0.90$.\\
+Il secondo ciclo, quello centrale, modifica il numero di individui per ogni gruppo. 
+Ad ogni passo viene incrementato il numero di persone con un'alta possibilità di condivisione 
+passando dal 10\% al 90\%. Operazione inversa viene eseguita per le persone con bassa possibilità di 
+condivisione passando dal 90\% al 10\% della popolazione totale.
+Il terzo ciclo, più interno, invece itera sul parametro $\alpha$ modificando quindi la pendenza della 
+curva per gli individui con alta probabilità di condivisione.
+
+Il test viene composto da i parametri dinamici appena citati e dai seguenti parametri statici:
+\begin{itemize}
+\item La dimensione della popolazione non cambia mai e resta sempre di 500 Nodi;
+\item Il parametro $\alpha$ del gruppo con bassa probabilità di condivisione rimane $0.75$, 
+ottenendo una densità di probabilità come in figura \ref{img:weibull_alpha_0_75};
+\item La topologia del grafo è la stessa per ogni esecuzione del test;
+\end{itemize}
+
+Il risultato di ogni test inoltre viene mediato sull'esito di 500 test.
+
+
+
+
+
+
+
 
 
 

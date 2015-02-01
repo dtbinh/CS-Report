@@ -10,7 +10,7 @@ Install [Latex](http://www.latex-project.org/)
 
 
 ``` bash
-sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-fonts-recommended texlive-doc-?? texlive-lang-?? kile
+sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-fonts-recommended texlive-science texlive-doc-?? texlive-lang-?? kile
 ```
 
 

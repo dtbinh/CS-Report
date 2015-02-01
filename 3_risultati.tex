@@ -16,15 +16,21 @@ Verrà anche condotto uno studio in cui il totale degli utenti si divide in due 
 pochi utenti con alte probabilità di condividere l'informazione e, viceversa, 
 molti utenti con basse probabilità di condivisione.
 La possibilità di condivisione è data nuovamente dal confronto tra 
-la ``forza della notizia'' e la ``forza di astensione''\ref{subsection:TODO}. 
+la ``forza della notizia'' e la ``forza di astensione''. 
 In questo caso, però, l'astensione viene calcolata tramite una funzione di distribuzione di probabilità non lineare,
 quella scelta è la funzione Weibull.
-La funzione ``random-weibull''\ref{subsection:TODO} fa variare, per mezzo dei due parametri $\alpha$ e $\beta$, la pendenza della distribuzione
+La funzione ``random-weibull'' fa variare, per mezzo dei due parametri $\alpha$ e $\beta$, la pendenza della distribuzione
 e, di conseguenza, anche la sua densità.
+
+
+
 
 Per ottenere una curva di distribuzione più o meno inclinata, in seguito ai tentativi attuati, 
 è stato ritenuto opportuno mantenere il valore di $\beta$ costante a 1.0 e variare, invece, quello di $\alpha$.
 
+
+
+%----
 
 \begin{figure}[!ht]
 \centerline {
@@ -60,6 +66,10 @@ ottenendo una densità di probabilità come in figura \ref{img:weibull_alpha_0_7
 \end{itemize}
 
 Il risultato di ogni test inoltre viene mediato sull'esito di 500 test.
+
+
+%----
+
 
 La figura \ref{img:last_test_str_0_5} mostra il risultato atteso, 
 ovvero la crescita del numero di visualizzazioni sia al variare di $\alpha$ che all'aumentare 
