@@ -1,4 +1,3 @@
-\newpage
 \section{Analisi dei Risultati}
 \label{section:analisirisultati}
 
@@ -48,7 +47,7 @@ Per questo test abbiamo bisogno di:
 
 
 Con il grafo descritto da Barabási e Albert si ottiene il risultato che viene mostrato nel grafico di figura \ref{img:result_test_1_pa}.
-Come si nota ha una crescita molto lenta e solo dopo che la probabilità di condivisione ha superato il valore di 0.5 si ha una salita.
+Come si nota ha una crescita molto lenta e solo dopo che la probabilità di condivisione ha superato il valore di 0.5 si ha una salita tangibile.
 La topologia descritta da Dorogovtsev e Mendes invece si comporta molto meglio e viene mostrata nel grafico in figura \ref{img:result_test_1_dm}.
 Ha una crescita quasi lineare e alla fine, quando la forza è attorno l'85\% crea una ``pancia'' verso l'alto che sta a dimostrare l'altissima 
 condivisione.
@@ -56,9 +55,12 @@ condivisione.
 Il primo grafo è molto svantaggiato per via della sua struttura. Come abbiamo detto in fase di progettazione (Capitolo \ref{section:progettazione}) 
 questo grafo non presenta cricche al suo interno.
 Questa proprietà lo penalizza nelle simulazioni che sono basate sul numero di visualizzazioni e perciò sulla probabilità di condivisione.
-Nel modello descritto da Dorogovtsev e Mendes invece sono presenti cricche al suo interno e possiede quasi il doppio dei link del Preferential Attachment.
+Nel modello descritto da Dorogovtsev e Mendes invece sono presenti cricche al suo interno ed il grafo di questo esempio ne è la prova
+avendo quasi il doppio dei link del Preferential Attachment.
 
-Per i motivi appena esposti si è optato di affrontare i prossimi test con la seconda topologia.
+Com'è stato appena esposto, il confronto tra i due modelli di grafo ci ha permesso di assumere che la seconda topologia 
+affronti meglio questo studio.
+Si è perciò optato di sostenere i prossimi test con la seconda topologia realizzata da Dorogovtsev e Mendes.
 
 Inoltre, anche se è solo un punto di vista dell'autore, si può notare in questo modello di grafo una 
 maggior somiglianza con la topologia più comune di un Social Network.
@@ -67,42 +69,91 @@ maggior somiglianza con la topologia più comune di un Social Network.
 \subsection{Secondo test}
 \label{section:second_test}
 
+In seguito al confronto studiato nel primo test, ed aver deciso quale fosse il modello di grafo migliore per questo tipo di analisi, 
+possiamo concentrarci sulla seconda fase definita degli obiettivi.
 
-Dopo aver deciso quale fosse il modello di grafo migliore
+Questo secondo studio ci permetterà di analizzare come viene condivisa una notizia, con un argomento, in differenti 
+Social Network\footnote{\scriptsize Per Social Network viene inteso lo stesso grafo di 500 nodi utilizzato in precedenza 
+ma con le età degli utenti prese dallo studio statistico di figura~\ref{img:age_distribution_social}.}.
+La notizia ha 5 valori di forza di condivisione che si riferiscono ai 5 differenti gruppi di età. 
+La prima prova ha implicato l'inizializzazione dei valori di forza, di tutti i gruppi tranne che per quello con più utenti, a
+0.75\footnote{\scriptsize 0.75 è un valore piuttosto alto che permette una buona condivisione.}.
+Quest'ultimo infatti verrà fatto variare da 0 a 1 con passi di 0.05.
+Ci permetterà di capire come cambiano i ``Viewers'' in queste condizioni.
 
+\begin{figure}[!ht]
+  \begin{subfigure}[l]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-fb_1.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Facebook}
+    \label{img:result_test_2_fb_1}
+  \end{subfigure}  
+  \begin{subfigure}[c]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-tw_1.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Twitter}
+    \label{img:result_test_2_tw_1}
+  \end{subfigure}  
+  \begin{subfigure}[r]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-gp_1.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Google+}
+    \label{img:result_test_2_gp_1}
+  \end{subfigure}  
+ \caption{Risultati del secondo test}
+ \label{img:results_test_2_1}
+\end{figure}
 
+Nei grafici di figura~\ref{img:results_test_2_1} si nota un'alta linearità data dalla crescita della forza di condivisione della notizia.
+Le curve nei grafici non partono dall'origine perchè il valore 0.75 fornisce comunque una buona condivisione, ma non ottima. 
+Sommando infatti gli ultimi non viene mai raggiunto l'ottimo ovvero 500 condivisioni.
 
-
+Per testare la linearità del grafo è stato prodotto un secondo test dove, a differenza di quello appena compiuto,
+verranno variati tutti e 5 i valori di forza da 0 a 1.
 
 
 \begin{figure}[!ht]
   \begin{subfigure}[l]{0.32\textwidth}
     \begin{center}
-      \includegraphics[width=1\textwidth]{charts/second-test-fb.pdf}
+      \includegraphics[width=1\textwidth]{charts/second-test-fb_2.pdf}
     \end{center}
     \vspace*{-10pt}
     \caption{Facebook}
-    \label{img:result_test_2_fb}
+    \label{img:result_test_2_fb_2}
   \end{subfigure}  
   \begin{subfigure}[c]{0.32\textwidth}
     \begin{center}
-      \includegraphics[width=1\textwidth]{charts/second-test-tw.pdf}
+      \includegraphics[width=1\textwidth]{charts/second-test-tw_2.pdf}
     \end{center}
     \vspace*{-10pt}
     \caption{Twitter}
-    \label{img:result_test_2_tw}
+    \label{img:result_test_2_tw_2}
   \end{subfigure}  
   \begin{subfigure}[r]{0.32\textwidth}
     \begin{center}
-      \includegraphics[width=1\textwidth]{charts/second-test-gp.pdf}
+      \includegraphics[width=1\textwidth]{charts/second-test-gp_2.pdf}
     \end{center}
     \vspace*{-10pt}
     \caption{Google+}
-    \label{img:result_test_2_gp}
+    \label{img:result_test_2_gp_2}
   \end{subfigure}  
  \caption{Risultati del secondo test}
- \label{img:results_test_2}
+ \label{img:results_test_2_2}
 \end{figure}
+
+%non inizia da 0 per i primi attorno <<<<<<
+% tutti i test poco produttivo
+
+%Per avere un risultato piu accurato si sarebbero dovuti effettuare tutti i test, facendo variare ad ogni step 
+I grafici di figura~\ref{img:results_test_2_2} confermano la crescita lineare dovuta dall'aumento della forza in tutti per tutti i gruppi.
+Si può nuovamente osservare la stessa pancia verso l'alto che abbiamo visto nel grafico di figura~\ref{img:result_test_1_dm}. 
+
 
 
 
@@ -139,6 +190,7 @@ ottenendo una densità di probabilità come in figura \ref{img:weibull_alpha_0_7
 
 
 \begin{figure}[!ht]
+\vspace*{-20pt}
 \centerline {
   \includegraphics[width=1\textwidth]{charts/last-test-str_0.5.pdf}
 }

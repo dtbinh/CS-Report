@@ -1,4 +1,3 @@
-\newpage
 \section{Analisi dei Risultati}
 \label{section:analisirisultati}
 
@@ -27,6 +26,7 @@ Per questo test abbiamo bisogno di:
 
 
 
+\vspace*{-15pt}
 \begin{figure}[!ht]
   \begin{subfigure}[l]{0.5\textwidth}
     \begin{center}
@@ -70,47 +70,97 @@ maggior somiglianza con la topologia più comune di un Social Network.
 \subsection{Secondo test}
 \label{section:second_test}
 
-In seguito al confronto studiato nel primo test, ed aver deciso quale fosse il modello di grafo migliore per le analisi, 
-possiamo concentrarci sulla seconda fase definita negli obiettivi.
+In seguito al confronto studiato nel primo test, ed aver deciso quale fosse il modello di grafo migliore per questo tipo di analisi, 
+possiamo concentrarci sulla seconda fase definita degli obiettivi.
+Questo secondo studio ci permetterà di analizzare come viene condivisa una notizia, con un argomento, in differenti 
+Social Network\footnote{\scriptsize Per Social Network viene inteso lo stesso grafo di 500 nodi utilizzato in precedenza 
+ma con le età degli utenti prese dallo studio statistico di figura~\ref{img:age_distribution_social}.}.
+La notizia ha 5 valori di forza di condivisione che si riferiscono ai 5 differenti gruppi di età. 
+La prima prova ha implicato l'inizializzazione dei valori di forza, di tutti i gruppi tranne che per quello con più utenti, a
+0.75\footnote{\scriptsize 0.75 è un valore piuttosto alto che permette una buona condivisione.}.
+Quest'ultimo infatti verrà fatto variare da 0 a 1 con passi di 0.05.
+Ci permetterà di capire come cambiano i ``Viewers'' in queste condizioni.
 
-Questo secondo studio ci permetterà di analizzare come viene condivisa una notizia, con un argomento, viene propagata nei differenti social.
-
-vuole mettere in luce come una notizia, con un topic adatto maggiormente ad una
-> > certa fascia d'età, viene propagata nei differenti social.
-
-% tutti i test poco produttivo
-
-
+\vspace*{-15pt}
 \begin{figure}[!ht]
   \begin{subfigure}[l]{0.32\textwidth}
     \begin{center}
-      \includegraphics[width=1\textwidth]{charts/second-test-fb.pdf}
+      \includegraphics[width=1\textwidth]{charts/second-test-fb_1.pdf}
     \end{center}
     \vspace*{-10pt}
     \caption{Facebook}
-    \label{img:result_test_2_fb}
+    \label{img:result_test_2_fb_1}
   \end{subfigure}  
   \begin{subfigure}[c]{0.32\textwidth}
     \begin{center}
-      \includegraphics[width=1\textwidth]{charts/second-test-tw.pdf}
+      \includegraphics[width=1\textwidth]{charts/second-test-tw_1.pdf}
     \end{center}
     \vspace*{-10pt}
     \caption{Twitter}
-    \label{img:result_test_2_tw}
+    \label{img:result_test_2_tw_1}
   \end{subfigure}  
   \begin{subfigure}[r]{0.32\textwidth}
     \begin{center}
-      \includegraphics[width=1\textwidth]{charts/second-test-gp.pdf}
+      \includegraphics[width=1\textwidth]{charts/second-test-gp_1.pdf}
     \end{center}
     \vspace*{-10pt}
     \caption{Google+}
-    \label{img:result_test_2_gp}
+    \label{img:result_test_2_gp_1}
   \end{subfigure}  
  \caption{Risultati del secondo test}
- \label{img:results_test_2}
+ \label{img:results_test_2_1}
 \end{figure}
+\vspace*{-15pt}
+
+Nei grafici di figura~\ref{img:results_test_2_1} si nota un'alta linearità con le percentuali di età definite nel social Network, 
+mentre la crescita è dovuta dall'aumento progressivo della forza di condivisione della notizia.
+Le curve nei grafici non partono dall'origine perchè il valore 0.75 fornisce comunque una buona condivisione, ma non ottima. 
+Sommando infatti gli ultimi non viene mai raggiunto l'ottimo ovvero 500 condivisioni.
+
+Per testare la linearità del grafo è stato prodotto un secondo test dove, a differenza di quello appena compiuto,
+verranno variati tutti e 5 i valori di forza da 0 a 1.
+I grafici di figura~\ref{img:results_test_2_2} confermano la crescita lineare dovuta dall'aumento della forza di ogni gruppo.
 
 
+\vspace*{-15pt}
+\begin{figure}[!ht]
+  \begin{subfigure}[l]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-fb_2.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Facebook}
+    \label{img:result_test_2_fb_2}
+  \end{subfigure}  
+  \begin{subfigure}[c]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-tw_2.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Twitter}
+    \label{img:result_test_2_tw_2}
+  \end{subfigure}  
+  \begin{subfigure}[r]{0.32\textwidth}
+    \begin{center}
+      \includegraphics[width=1\textwidth]{charts/second-test-gp_2.pdf}
+    \end{center}
+    \vspace*{-10pt}
+    \caption{Google+}
+    \label{img:result_test_2_gp_2}
+  \end{subfigure}  
+ \caption{Risultati del secondo test}
+ \label{img:results_test_2_2}
+\end{figure}
+\vspace*{-15pt}
+
+%non inizia da 0 per i primi attorno <<<<<<
+% tutti i test poco produttivo
+
+%Per avere un risultato piu accurato si sarebbero dovuti effettuare tutti i test, facendo variare ad ogni step 
+I grafici di figura~\ref{img:results_test_2_2} confermano la crescita lineare dovuta dall'aumento della forza in tutti per tutti i gruppi.
+Si può nuovamente osservare la stessa pancia verso l'alto che abbiamo visto nel grafico di figura~\ref{img:result_test_1_dm}. 
+Si vuole inoltre far notare come, anche al passo 0, le visualizzazioni siano differenti da 1 ovvero quella del paziente zero.
+Il motivo è semplice, infatti i ``Viewers'' in questo caso sono tutti quei nodi direttamente connessi al primo condivisore.
 
 \subsection{Terzo test}
 \label{section:third_test}
@@ -145,6 +195,7 @@ ottenendo una densità di probabilità come in figura \ref{img:weibull_alpha_0_7
 
 
 \begin{figure}[!ht]
+\vspace*{-20pt}
 \centerline {
   \includegraphics[width=1\textwidth]{charts/last-test-str_0.5.pdf}
 }
