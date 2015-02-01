@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  1 FEB 2015 01:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.20)  1 FEB 2015 05:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,7 +689,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 34.
+Package hyperref Info: Option `colorlinks' set `true' on input line 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -780,26 +780,26 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 (/usr/share/texlive/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
 (./0_main.aux
 
-LaTeX Warning: Label `img:weibull_alpha_0_75' multiply defined.
+LaTeX Warning: Label `img:graph_models' multiply defined.
 
 )
 \openout1 = `0_main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 84.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -831,21 +831,21 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \celsius on input line 81.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 81.
+LaTeX Info: Redefining \celsius on input line 84.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 84.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 81.
-Package gensymb Info: Using \Omega for \ohm on input line 81.
+LaTeX Info: Redefining \ohm on input line 84.
+Package gensymb Info: Using \Omega for \ohm on input line 84.
 
 Package gensymb Warning: Not defining \micro.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring ON on input line 81.
+Package hyperref Info: Link coloring ON on input line 84.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -855,9 +855,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count166
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
 
 (./0_main.out) (./0_main.out)
 \@outlinefile=\write3
@@ -866,54 +866,54 @@ LaTeX Info: Redefining \nameref on input line 81.
 \c@lstlisting=\count167
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 92.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 95.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 92.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 95.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 92.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 95.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 92.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 95.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 92.
+(Font)              <10> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 92.
+(Font)              <7> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 92.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 92.
+(Font)              <5> on input line 95.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 95.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 98.
+(Font)              <9> on input line 101.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 98.
+(Font)              <6> on input line 101.
 
-Overfull \hbox (5.4037pt too wide) in paragraph at lines 109--112
+Overfull \hbox (5.4037pt too wide) in paragraph at lines 112--115
 \T1/lmr/m/n/9 nale, una copia della fo-tografia della ma-estra. In un'ora e mez
 za l'immagine
  []
 
 
 LaTeX Warning: Reference `section:implementazione' on page 1 undefined on input
- line 134.
+ line 137.
 
 
-Overfull \hbox (3.07642pt too wide) in paragraph at lines 132--138
+Overfull \hbox (3.07642pt too wide) in paragraph at lines 135--141
 []\T1/lmr/m/n/9 Nell'Introduzione (Capi-tolo [][]1[][]) ver-ranno ele-canti i p
 unti trat-tati all'interno
  []
@@ -921,12 +921,7 @@ unti trat-tati all'interno
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./1_introduzione.tex
-Overfull \hbox (5.00903pt too wide) in paragraph at lines 26--28
-[]\T1/lmr/m/n/10 ``Spreaders'' : tutti gli utenti che de-ci-dono di con-di-vide
-re la no-tizia. Il ``paziente
- []
-
-<img/age-distribution.png, id=75, 751.80875pt x 426.59375pt>
+<img/age-distribution.png, id=91, 751.80875pt x 426.59375pt>
 File: img/age-distribution.png Graphic file (type png)
 
 <use img/age-distribution.png>
@@ -964,7 +959,7 @@ t-graph-eps-converted-to.pdf img/preferential-attachment-graph.eps>
 (epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/preferential-attachment-graph-eps-converted-to.pdf, id=120, 232.87pt x 202
+<img/preferential-attachment-graph-eps-converted-to.pdf, id=137, 232.87pt x 202
 .7575pt>
 File: img/preferential-attachment-graph-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -984,7 +979,7 @@ ph-eps-converted-to.pdf img/dorogovtsev-mendes-graph.eps>
 (epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/dorogovtsev-mendes-graph-eps-converted-to.pdf, id=121, 216.81pt x 192.72pt
+<img/dorogovtsev-mendes-graph-eps-converted-to.pdf, id=138, 216.81pt x 192.72pt
 >
 File: img/dorogovtsev-mendes-graph-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -993,7 +988,7 @@ Package pdftex.def Info: img/dorogovtsev-mendes-graph-eps-converted-to.pdf used
  on input line 140.
 (pdftex.def)             Requested size: 104.13547pt x 92.56628pt.
 
-<img/gui-graph.png, id=122, 177.66376pt x 193.72375pt>
+<img/gui-graph.png, id=139, 177.66376pt x 193.72375pt>
 File: img/gui-graph.png Graphic file (type png)
  <use img/gui-graph.png>
 Package pdftex.def Info: img/gui-graph.png used on input line 151.
@@ -1001,20 +996,20 @@ Package pdftex.def Info: img/gui-graph.png used on input line 151.
 
 [5 <./img/preferential-attachment-graph-eps-converted-to.pdf> <./img/dorogovtse
 v-mendes-graph-eps-converted-to.pdf>]
-<img/gui-main.png, id=150, 180.675pt x 472.76625pt>
+<img/gui-main.png, id=167, 180.675pt x 472.76625pt>
 File: img/gui-main.png Graphic file (type png)
  <use img/gui-main.png>
 Package pdftex.def Info: img/gui-main.png used on input line 179.
 (pdftex.def)             Requested size: 97.19415pt x 254.32332pt.
 
 [6 <./img/gui-graph.png> <./img/gui-main.png>]
-<img/gui-news.png, id=171, 176.66pt x 194.7275pt>
+<img/gui-news.png, id=188, 176.66pt x 194.7275pt>
 File: img/gui-news.png Graphic file (type png)
  <use img/gui-news.png>
 Package pdftex.def Info: img/gui-news.png used on input line 234.
 (pdftex.def)             Requested size: 97.19415pt x 107.1361pt.
 
-<img/gui-first-second-test.png, id=172, 253.94875pt x 118.4425pt>
+<img/gui-first-second-test.png, id=189, 253.94875pt x 118.4425pt>
 File: img/gui-first-second-test.png Graphic file (type png)
 
 <use img/gui-first-second-test.png>
@@ -1022,99 +1017,73 @@ Package pdftex.def Info: img/gui-first-second-test.png used on input line 255.
 (pdftex.def)             Requested size: 121.49535pt x 56.66559pt.
  [7 <./img/gui-news.png> <./img/gui-first-second-test.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 323.
- [8] <img/gui-third-test.png, id=200, 206.7725pt x 266.9975pt>
+put line 324.
+ [8] <img/gui-third-test.png, id=217, 206.7725pt x 266.9975pt>
 File: img/gui-third-test.png Graphic file (type png)
 
 <use img/gui-third-test.png>
-Package pdftex.def Info: img/gui-third-test.png used on input line 355.
+Package pdftex.def Info: img/gui-third-test.png used on input line 356.
 (pdftex.def)             Requested size: 97.19415pt x 125.50513pt.
  [9 <./img/gui-third-test.png>]
-<img/weibull-alpha-0.75.png, id=216, 833.1125pt x 237.88875pt>
+<img/weibull-alpha-0.75.png, id=233, 833.1125pt x 237.88875pt>
 File: img/weibull-alpha-0.75.png Graphic file (type png)
 
 <use img/weibull-alpha-0.75.png>
-Package pdftex.def Info: img/weibull-alpha-0.75.png used on input line 388.
+Package pdftex.def Info: img/weibull-alpha-0.75.png used on input line 389.
 (pdftex.def)             Requested size: 381.838pt x 109.03085pt.
 ) (./3_risultati.tex [10 <./img/weibull-alpha-0.75.png>]
-File: img/weibull-alpha-0.75.png Graphic file (type png)
- <use img/weibull-alpha-0.75.png>
-Package pdftex.def Info: img/weibull-alpha-0.75.png used on input line 38.
-(pdftex.def)             Requested size: 381.838pt x 109.03085pt.
- [11]
-<charts/last-test-str_0.5.pdf, id=235, 799.98875pt x 412.54124pt>
+<img/interface-test-1-preferential-attachment-chart.png, id=253, 416.55624pt x 
+266.9975pt>
+File: img/interface-test-1-preferential-attachment-chart.png Graphic file (type
+ png)
+ <use img/interface-test-1-preferential-attachment-chart.png>
+Package pdftex.def Info: img/interface-test-1-preferential-attachment-chart.png
+ used on input line 33.
+(pdftex.def)             Requested size: 173.56177pt x 111.24596pt.
+
+<img/interface-test-1-dorogovtsev-mendes-chart.png, id=254, 416.55624pt x 266.9
+975pt>
+File: img/interface-test-1-dorogovtsev-mendes-chart.png Graphic file (type png)
+
+ <use img/interface-test-1-dorogovtsev-mendes-chart.png>
+Package pdftex.def Info: img/interface-test-1-dorogovtsev-mendes-chart.png used
+ on input line 40.
+(pdftex.def)             Requested size: 173.56177pt x 111.24596pt.
+
+Overfull \hbox (2.05554pt too wide) in paragraph at lines 31--45
+[]$[]$ $[]$ 
+ []
+
+[11] [12 <./img/interface-test-1-preferential-attachment-chart.png> <./img/inte
+rface-test-1-dorogovtsev-mendes-chart.png>]
+<charts/last-test-str_0.5.pdf, id=273, 799.98875pt x 412.54124pt>
 File: charts/last-test-str_0.5.pdf Graphic file (type pdf)
 
 <use charts/last-test-str_0.5.pdf>
-Package pdftex.def Info: charts/last-test-str_0.5.pdf used on input line 89.
-(pdftex.def)             Requested size: 381.838pt x 196.90965pt.
-) (./4_conclusioni.tex) [12 <./charts/last-test-str_0.5.pdf>] [13] (./5_bibliog
+Package pdftex.def Info: charts/last-test-str_0.5.pdf used on input line 108.
+(pdftex.def)             Requested size: 347.12354pt x 179.00705pt.
+) (./4_conclusioni.tex [13 <./charts/last-test-str_0.5.pdf>]) [14] (./5_bibliog
 rafia.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--15
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 [][]$\T1/lmr/m/n/9 http : / / www . barabasilab . com / pubs / CCNR -[] ALB _ P
 ublications / 199910 -[] 15 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 [][]$\T1/lmr/m/n/9 http : / / www . statista . com / statistics / 274829 / age 
 -[] distribution -[] of -[] active -[] social -[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--55
-
- []
-
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+ [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./0_main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `0_main.out' has not changed.
-(rerunfilecheck)             Checksum: 9E521CB3398B9988B77C09DF65D6A1FE;764.
+(rerunfilecheck)             Checksum: EBBBAD6EAC9AF27D57463F5B590D2F5A;958.
 
 
 LaTeX Warning: There were undefined references.
@@ -1122,19 +1091,19 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 10751 strings out of 495017
- 155758 string characters out of 6181021
- 253459 words of memory out of 5000000
- 13680 multiletter control sequences out of 15000+600000
- 73159 words of font info for 48 fonts, out of 8000000 for 9000
- 28 hyphenation exceptions out of 8191
- 36i,9n,43p,493b,1095s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm
+ 10787 strings out of 495017
+ 156714 string characters out of 6181021
+ 253724 words of memory out of 5000000
+ 13710 multiletter control sequences out of 15000+600000
+ 71451 words of font info for 47 fonts, out of 8000000 for 9000
+ 29 hyphenation exceptions out of 8191
+ 36i,9n,43p,311b,1095s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm
 /lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fon
@@ -1143,14 +1112,15 @@ ts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb>
 /public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on 0_main.pdf (14 pages, 480859 bytes).
+onts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmtt9.pfb>
+Output written on 0_main.pdf (15 pages, 516647 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 290 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

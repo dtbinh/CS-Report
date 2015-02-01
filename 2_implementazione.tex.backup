@@ -64,10 +64,10 @@ L'idea è quella di dare la ``possibilità'' all'utente, come nella realtà, di 
 notizia gli interessa oppure no. 
 Questo ci obbliga ad aggiungere un nuovo paramentro all'utente, l'astensione alla notizia.
 
-Così facendo la notizia verrà condivisa dall'utente \emph{'i'} con una certa età \emph{'e'} se:
-\begin{equation*}
-\Rightarrow NOTIZIA_e \quad > \quad UTENTE_i.astensione
-\end{equation*}
+Così facendo la notizia verrà condivisa dall'utente \emph{'i-esimo'} con una certa età \emph{'e'} se:
+\[
+NOTIZIA_e \quad > \quad UTENTE_i.astensione
+\]
 dove $\quad NOTIZIA_e \quad$ è la forza di condivisione della notizia su una data fascia d'età \emph{'e'}, 
 mentre $\quad UTENTE_i.astensione \quad$ è l'astensione alla notizia dell'utente i-esimo.
 
@@ -283,39 +283,41 @@ soddisfare gli obiettivi prefissati.
 L'algoritmo~\ref{alg:core_spread}, data la sua importanza, è stato definito il nucleo delle simulazioni 
 ed è colui che calcola, ad ogni passo, come la notizia viene propagata. 
 
+\vspace*{-10pt}
 \begin{algorithm}
  \begin{algorithmic}[1]
     \Procedure{Core}{$nodes, news$}
-      \If {(all $nodes$ have seen the news)}
-	\State \Return END\_OK
+      \If {(all nodes have seen the news)}
+	\State \Return END\smuscore OK
       \Else 
-	\ForAll {($node$ \textbf{in} $nodes$ \textbf{with} [$seen\_news$ = \textbf{false}])}
-	  \If {(\textbf{any} $node_{neighbors}$ \textbf{with} [$shared\_news$ = \textbf{true}])}\\
+	\ForAll {(node \textbf{in} nodes \textbf{with} [seen\smuscore news = \textbf{false}])}
+	  \If {(\textbf{any} node$_{neighbors}$ \textbf{with} [shared\smuscore news = \textbf{true}])}\\
+	  
 	    \Comment{Leggo il valore di probabilità della notizia per l'età del utente corrente}
-	    \State $p\_news \gets news_{prob[node_{age}]}$
+	    \State p\smuscore news $\gets$ news$_{prob[node_{age}]}$
 	    
-	    \If { $p\_news \geq node.chance\_of\_abstention$ }
-	      \State $node_{tmp\_shared\_news} \gets \textbf{true}$
+	    \If { p\smuscore news $\geq$ node.chance\smuscore of\smuscore abstention }
+	      \State node$_{tmp\smuscore shared\smuscore news} \gets$ \textbf{true}
 	    \EndIf
-	    \State $node_{tmp\_seen\_news} \gets \textbf{true}$
+	    \State node$_{tmp\smuscore seen\smuscore news} \gets$ \textbf{true}
 	    
 	  \EndIf
 	\EndFor
-	\If {(\textbf{no} $nodes$ \textbf{with} [$tmp\_seen\_news$ = \textbf{True}])}
-	  \State \Return END\_KO
+	\If {(\textbf{no} nodes \textbf{with} [tmp\smuscore seen\smuscore news = \textbf{True}])}
+	  \State \Return END\smuscore KO
 	\EndIf
 	
-	\ForAll {($node$ \textbf{in} $nodes$ \textbf{with} [$tmp\_seen\_news$ = \textbf{true}])}
-	  \State $node_{seen\_news} \gets \textbf{true}$
-	  \State $node_{tmp\_seen\_news} \gets \textbf{false}$
+	\ForAll {(node \textbf{in} nodes \textbf{with} [tmp\smuscore seen\smuscore news = \textbf{true}])}
+	  \State node$_{seen\smuscore news} \gets$ \textbf{true}
+	  \State node$_{tmp\smuscore seen\smuscore news} \gets$ \textbf{false}
 	\EndFor
 	
-	\ForAll {($node$ \textbf{in} $nodes$ \textbf{with} [$tmp\_shared\_news$ = \textbf{true}])}
-	  \State $node_{shared\_news} \gets \textbf{true}$
-	  \State $node_{tmp\_shared\_news} \gets \textbf{false}$
+	\ForAll {(node \textbf{in} nodes \textbf{with} [tmp\smuscore shared\smuscore news = \textbf{true}])}
+	  \State node$_{shared\smuscore news} \gets$ \textbf{true}
+	  \State node$_{tmp\smuscore shared\smuscore news} \gets$ \textbf{false}
 	\EndFor
       
-	\State \Return SIMULATION\_NOT\_FINISHED\_YET
+	\State \Return SIMULATION\smuscore NOT\smuscore FINISHED\smuscore YET
       \EndIf
     \EndProcedure
  \end{algorithmic}
@@ -323,6 +325,7 @@ ed è colui che calcola, ad ogni passo, come la notizia viene propagata.
  \caption{Nucleo della propagazione della notizia}
  \label{alg:core_spread}
 \end{algorithm}
+\vspace*{-10pt}
 
 Prima verifica se ci sia qualche nodo che non ha visualizzato la notizia (Riga 2), 
 poi richiede a tutti i nodi ``Ignorants'' se hanno un vicino ``Spreader'' (Riga 5 e 6). 
@@ -349,15 +352,14 @@ della notizia da 0 a 1 con step di 0.05 per tutti i gruppi.
 Così facendo si arriverà ad avere un grafico dove sull'asse X ci saranno nuovamente i ticks, ovvero l'avanzamento della simulazione.
 Mentre sull'asse Y ci saranno tutte le medie di 100 test del numero di ``Viewers'' di ogni gruppo.
 
-\begin{wrapfigure}{r}{0.33\textwidth}
-  \vspace*{-20pt}
+\begin{wrapfigure}{r}{0.30\textwidth}
+  \vspace*{-35pt}
   \begin{center}
     \includegraphics[width=0.28\textwidth]{img/gui-third-test.png}
   \end{center}
  \vspace*{-10pt}
- \caption{GUI: 
- terzo test}
- \vspace*{-10pt}
+ \caption{GUI: terzo test}
+ \vspace*{-20pt}
  \label{img:gui_third_test}
 \end{wrapfigure}
 
@@ -366,7 +368,7 @@ Mentre sull'asse Y ci saranno tutte le medie di 100 test del numero di ``Viewers
 \subsubsection{``Great Sharers vs. Little Sharers''}
 
 L'ultima simulazione è quella che si distingue di più dalle altre dato il concetto che ci sta dietro.
-A differenza dei precedenti test, questo vuole studiare il confronto tra due gruppi che si differenziano 
+A differenza dei precedenti test, si vuole studiare il confronto tra due gruppi che si differenziano 
 per la loro probabilità di astensione alla notizia. 
 Nelle prime due simulazioni questo dato veniva deciso da una funzione random che possiede una distribuzione di
 densità lineare.
@@ -375,38 +377,70 @@ Quella scelta è la funzione Weibull\cite{biblio:weibull}.
 La funzione ``random-weibull'' fa variare la densità della distribuzione per mezzo di due parametri $\alpha$ e $\beta$.
 Il valore restituito dalla funzione è sempre un numero tra 0 ed 1 perciò, per il calcolo della propagazione della notizia,
 può essere riutilizzato l'algoritmo~\ref{alg:core_spread} mostrato in precedenza.
-In figura~\ref{img:gui_third_test} sono presenti 2 slider per $\alpha$ e uno per $\beta$. 
+In figura~\ref{img:gui_third_test} sono presenti 3 slider per la manipolazione degli $\alpha$ e di $\beta$. 
 Il paramentro $\beta$ fa modificare sopratutto la forma della curva, mentre $\alpha$ la pendenza. 
 Quello che ci serve è una pendenza differente perciò sono stati aggiunti due cursori per i parametri $\alpha$ dei due gruppi.
 In figura~\ref{img:weibull_alpha_0_75} viene mostrato il dislivello di cui si sta parlando.
-Il primo, con $X$ più tendente a 0 permette una miglior condivisione mentre per il secondo grafico se ne ha una peggiore.
-Non essendo troppo alto, permette comunque al gruppo 2 un buon grado di condivisione della notizia.
+Nel primo istogramma, con $X$ più densa vicino a 0, viene permessa una miglior condivisione mentre nel secondo grafico se ne ha una peggiore.
 
 
-
-
-
-
-
-
-
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \centerline {
   \includegraphics[width=1.1\textwidth]{img/weibull-alpha-0.75.png}
 }
-\caption{I due istogrammi mostrano la rappresentazione di un vettore $X$ di 1 milione di cifre 
+\caption[caption for img/weibull-alpha-0.75.png]{I due istogrammi mostrano la rappresentazione di un vettore $X$ di 1 milione di cifre 
 calcolato mediante la funzione di densità di probabilità Weibull, con $\alpha = 0.75$.
 Il grafico di sinistra rappresenta la distribuzione originale, 
-mentre quello di destra la sua quasi 
-speculare\footnote{\scriptsize Quando si parla di numeri random non possiamo pretendere di avere lo stesso identico comportamento.} 
-calcolata grazie: $\forall x \in X, \quad 1 - x$.}
+mentre quello di destra la sua \emph{quasi \protect\footnotemark} speculare calcolata grazie: $\forall x \in X, \quad 1 - x$.}
 \label{img:weibull_alpha_0_75}
 \end{figure}
+\footnotetext{\scriptsize Quando si parla di numeri random non possiamo pretendere di avere lo stesso identico comportamento.} 
+
+In figura~\ref{img:gui_third_test} sono presenti altri 2 cursori per definire la percentuale degli utenti appartenenti ad ogni gruppo e 
+il cursore per impostare la ``forza'' della notizia.
+Alla pressione del tasto ``Great Sharers vs. Little Sharers'' viene lanciata una simulazione che riguarda i parametri selezionati.
+Vista la quantità di test da fare con tutti le combinazioni di parametri possibili è stato prodotto un secondo 
+algoritmo\footnote{\scriptsize 
+La procedura che permette di fare tutti i test impiega un tempo prolungato per la sua esecuzione.
+Per invocarla basta inserire il comando ``great-sharers-in-comparison-to-little-sharers-all-tests'' in modalità \emph{Observer} nel \emph{Command Center} di NetLogo.
+} che, grazie ai sui tre cicli annidati, riesce a considerare tutte le possibilità richieste dal terzo obiettivo.
 
 
 
-Questa analisi è stata sviluppata mediante tre cicli annidati che hanno considerato tutte le 
-possibilità che verranno di seguito esposte.\\
+
+%\vspace*{-80pt}
+\begin{algorithm}
+ \begin{algorithmic}[1]
+    \Procedure{great-sharers-in-comparison-to-little-sharers-all-tests}{}
+      \ForAll {(news\smuscore strength \textbf{in} [0.50 0.60 0.70 0.75 0.80 0.90])}
+	\State polulation\smuscore \%\smuscore step $\gets$ 10
+	\While {(polulation\smuscore \%\smuscore step $\leq$ 90)}
+	  \State \%\smuscore little\smuscore sharers  $\gets$  (100 - polulation\smuscore \%\smuscore step)
+	  \State \%\smuscore great\smuscore sharers  $\gets$  polulation\smuscore \%\smuscore step
+	  
+	  \ForAll {(weibull\smuscore alpha\smuscore great\smuscore sharers \textbf{in} [0.25 0.50 0.75 1.0])}
+	  
+	    \Comment Eseguo la simulazione 500 volte con i paramentri correnti per avere un risultato mediato più valido possibile
+	  
+	  \EndFor
+	  
+	  \State polulation\smuscore \%\smuscore step $\gets$ polulation\smuscore \%\smuscore step + 5
+	  
+	\EndWhile
+      \EndFor
+    \EndProcedure
+ \end{algorithmic}
+ 
+ \caption{Tre cicli annidati per considerare tutte le possibilità interessanti del terzo obiettivo}
+ \label{alg:third_test}
+\end{algorithm}
+
+
+
+
+\iffalse
+Per questa analisi è stato sviluppato un secondo Algoritmo, di tre cicli annidati che permette di considerare
+tutte le possibilità che sono state esposte.\\
 Il primo ciclo più esterno itera su alcuni valori di forza della notizia, 
 ovvero i seguenti: $0.50 \quad 0.60 \quad 0.70 \quad 0.75 \quad 0.80 \quad 0.90$.\\
 Il secondo ciclo, quello centrale, modifica il numero di individui per ogni gruppo. 
@@ -427,7 +461,7 @@ ottenendo una densità di probabilità come in figura \ref{img:weibull_alpha_0_7
 Il risultato di ogni test inoltre viene mediato sull'esito di 500 test.
 
 
-
+\fi
 
 
 
