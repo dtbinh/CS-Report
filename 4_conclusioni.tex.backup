@@ -35,20 +35,30 @@ maggiore di tanti che condividono meno.
 
 \subsection{Sviluppi Futuri}
 
-Come già affermato nell'introduzione, questo lavoro è stato già affrontato in passato e continuerà ad
+Come già affermato nell'introduzione,considerata la rilevanza dell'argomento nella società moderna,
+questo tema ro è stato già affrontato in passato e continuerà ad
 esserlo dato l'importanza che, l'argomento discusso, ha nella società moderna.
 
-
-
-%Come abbiamo potuto osservare sono pienamente in linea con 
-% motivare il singolo grafo
-
-
-
-Prendere i risultati del 3\degree test e confrontarli con quelli dei test base e vedere come si comportano, minore? maggiore?
-
-
-
+Vi sono molti test ancora da effettuare e alcune idee sono quelle che verranno elencate qui di seguito:
+\begin{itemize}
+ \item Un primo oggetto di studio potrebbe puntare ad una estensione dove viene inserita la durata della notizia, intesa come visibilità. 
+ Nella maggior parte dei social network esiste una ``home'' dove vengono visualizzate le notizie 
+ condivise dagli altri utenti a cui si è connessi.
+ Queste notizie però hanno una durata massima, definita in base alla data di condivisione e dal grado di interazione degli altri utenti.
+ Più una notizia viene condivisa più questa diventa importante e rimane in vista.
+ 
+ \item Un secondo oggetto di studio potrebbe essere quello di rifare i test da un punto di vista differente. 
+ In questo lavoro si è preso come precisato che la notizia venisse condivisa inizialmente da un nodo che ha il maggior numero di vicini, quindi, 
+ paragonandolo alla realtà potremmo definire l'hub un personaggio della TV o musica conosciuto da molte persone.
+ Per questa espansione il paziente zero potrebbe essere preso casualmente tra tutti i nodi o mediante una decisione più complessa.
+ 
+ \item Il terzo oggetto di studio riguarda la rete sociale. In questo lavoro, per colpa della divisione dei due applicativi, 
+ in tutte le simulazioni è stato usato lo stesso grafo di 500 Nodi creato grazie l'algoritmo proposto da Dorogovtsev e Mendes. 
+ Potrebbe essere opportuno analizzare nuovamente gli obiettivi con più reti studiandone perciò le differenze.
+ 
+ \item Un ultimo oggetto di studio punterebbe a confrontare i risultati del 2\degree e 3\degree test effettuati in questo lavoro.
+ Potrebbero essere analizzate le differenti crescite per osservarne il comportamento in più situazioni. 
+\end{itemize}
 
 
 
