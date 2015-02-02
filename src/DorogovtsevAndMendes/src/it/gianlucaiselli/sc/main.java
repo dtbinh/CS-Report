@@ -15,7 +15,9 @@ public class main {
 		Generator gen = new DorogovtsevMendesGenerator();
 		Graph graph = new SingleGraph("Dorogovtsev and Mendes model");
 		gen.addSink(graph);
-		gen.begin();  // The function begin() of generator initialize graph with 3 nodes
+		gen.begin();  
+		// The function begin() of generator initialize graph with 3 nodes
+		// for this reason i need to subtract 3 to N_NODES
 		for(int i=0; i < N_NODES - 3; i++)
 		    gen.nextEvents();
 		gen.end();

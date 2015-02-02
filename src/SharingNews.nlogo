@@ -351,7 +351,7 @@ to average-100-only-p-16-24
   ]
 end
 
-to average-100-p-16-to-64-diagonal
+to average-100-p-16-to-64
   reset-plots
   reset-ticks
   
@@ -624,7 +624,6 @@ to relocate-vertex
     ]
   ]
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 181
@@ -1122,7 +1121,7 @@ HORIZONTAL
 BUTTON
 2
 1124
-251
+206
 1157
 100 Test - One Group
 average-100-only-p-16-24
@@ -1220,10 +1219,10 @@ NIL
 BUTTON
 2
 1157
-251
+206
 1190
-100Test - All Groups Diagonal
-average-100-p-16-to-64-diagonal
+100Test - All Groups
+average-100-p-16-to-64
 NIL
 1
 T
@@ -1237,7 +1236,7 @@ NIL
 TEXTBOX
 1
 1075
-245
+201
 1093
 6) Run average 
 10
@@ -1247,11 +1246,11 @@ TEXTBOX
 SWITCH
 2
 1091
-251
+206
 1124
 shuffle-ages-each-run
 shuffle-ages-each-run
-1
+0
 1
 -1000
 
