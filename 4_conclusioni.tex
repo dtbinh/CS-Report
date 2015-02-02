@@ -3,13 +3,65 @@
 
 In conclusione i risultati posti come obiettivo sono stati raggiunti.
 
-è stato fatto vedere questo dell'obiettivo e ha avuto questa risoluzione, poi questo con questo e bla bla bla
+Innanzitutto è stato studiato quale modello di grafo fosse più in linea con il tipo di 
+analisi che questo progetto tratta.
+La topologia di grafo proposta da Dorogovtsev e Mendes ha avuto risultati di condivisione migliori. 
+Il parametro chiave è definito dalla sua struttura particolare che 
+prevede un numero di connessioni quasi doppio rispetto al Preferential Attachment.
 
+Il secondo studio invece ha fornito una risposta concreta a come una informazione con un certo argomento 
+viene condivisa in un Social Network con differenti utenti.
+L'argomento viene ``deciso'' tramite 5 valori che vanno ad incidere sulla probabilità di condivisione della notizia.
+Si può affermare che, più la notizia ha importanza, più questa viene condivisa.
+I test effettuati non sono stati esaustivi, ma sono bastati per capire la tendenza appena affermata.
+Effettuare tutti i test sarebbe stato poco produttivo e avrebbe impiegato un'enormità di risorse.
+Si vuol far notare infatti che per affrontare tutte le possibilità, dati i 5 parametri, ci sarebbero volute
+\[
+  \left(\frac{1 - 0}{0.05}\right)^5 * 500 test = 1.600.000.000
+\]
+simulazioni complete per garantire la stessa precisione. 
 
-Come abbiamo potuto osservare sono pienamente in linea con 
+Per quanto concerne il terzo studio, sono stati confrontati due gruppi di utenti con differenti 
+proprietà di astensione alla notizia. Queste proprietà sono state descritte dalla funzione di probabilità 
+Weibull che, grazie ad un parametro $\alpha$, permette di modificare la densità della distribuzione.
+Così facendo si avrà un gruppo con una probabilità di condivisione maggiore dell'altro.
+Nel test effettuato è stato mostrato un nuovo risultato. 
+La forza della notizia in questo caso non influisce con la crescita dei ``Viewers''.
+Il parametro importante è l'aumentare degli individui con la bassa astensione alla notizia rispetto a quelli
+con una più alta.
+Si pone anche l'attenzione come, in alcuni casi, pochi utenti che condividono molto possono avere un'influenza 
+maggiore di tanti che condividono meno.
 
 
 \subsection{Sviluppi Futuri}
 
+Come già affermato nell'introduzione, questo lavoro è stato già affrontato in passato e continuerà ad
+esserlo dato l'importanza che, l'argomento discusso, ha nella società moderna.
+
+
+
+%Come abbiamo potuto osservare sono pienamente in linea con 
+% motivare il singolo grafo
+
+
 
 Prendere i risultati del 3\degree test e confrontarli con quelli dei test base e vedere come si comportano, minore? maggiore?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

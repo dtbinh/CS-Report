@@ -423,10 +423,10 @@ mai manipolato.
     \Procedure{third-test-all}{alpha\smuscore little\smuscore sharers}
       \State weibull\smuscore alpha\smuscore little\smuscore sharers  $\gets$ alpha\smuscore little\smuscore sharers
       \ForAll {(news\smuscore strength \textbf{in} [0.50 0.60 0.70 0.75 0.80 0.90])}
-	\State polulation\smuscore \%\smuscore step $\gets$ 10
-	\While {(polulation\smuscore \%\smuscore step $\leq$ 90)}
-	  \State \%\smuscore little\smuscore sharers  $\gets$  (100 - polulation\smuscore \%\smuscore step)
-	  \State \%\smuscore great\smuscore sharers  $\gets$  polulation\smuscore \%\smuscore step
+	\State population\smuscore \%\smuscore step $\gets$ 10
+	\While {(population\smuscore \%\smuscore step $\leq$ 90)}
+	  \State \%\smuscore little\smuscore sharers  $\gets$  (100 - population\smuscore \%\smuscore step)
+	  \State \%\smuscore great\smuscore sharers  $\gets$  population\smuscore \%\smuscore step
 	  
 	  \ForAll {(weibull\smuscore alpha\smuscore great\smuscore sharers \textbf{in} [0.25 0.50 0.75 1.0])}
 	  
@@ -434,7 +434,7 @@ mai manipolato.
 	  
 	  \EndFor
 	  
-	  \State polulation\smuscore \%\smuscore step $\gets$ polulation\smuscore \%\smuscore step + 5
+	  \State population\smuscore \%\smuscore step $\gets$ population\smuscore \%\smuscore step + 5
 	  
 	\EndWhile
       \EndFor
